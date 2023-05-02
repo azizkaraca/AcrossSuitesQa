@@ -1,0 +1,51 @@
+
+
+    And User chooses one of device from table
+    And User chooses how many device should be entered
+    When User confirms the chooses
+    Then User should to see created device in Devices Area
+
+    Then User should to be in Devices Area
+          | devices |
+
+
+    public void ctrlMM() // no need to create it into the dialogContent area
+        {
+            ctrlMMactions(); // I called it directly from parent to the steps.
+        }
+
+    public void ctrlMMactions()
+        {
+            Actions actions = new Actions(GWD.getDriver());
+            actions.keyDown(Keys.CONTROL).sendKeys("m").sendKeys("m").keyUp(Keys.CONTROL).perform
+        }
+
+
+      | dashboard       | dashboard       |
+      | alarms          | alarms          |
+      | events          | events          |
+      | data            | data            |
+      | graphs          | graphs          |
+      | info            | mainInfo        |
+      | availability    | maintenance     |
+      | devices         | devices         |
+      | units           | units           |
+      | registers       | registers       |
+      | systemRegisters | systemRegisters |
+      | process         | process         |
+      | images          | image           |
+      | specifications  | specifications  |
+      | aggregations    | aggregations    |
+      | remoteControl   | remote          |
+      | reports         | reports         |
+
+    @And("User chooses a Breadcrumb and verify current Url")
+       public void userChoosesABreadcrumbAndVerifyCurrentUrl(DataTable elements) {
+
+           List<List<String>> listElement=elements.asLists(String.class);
+
+           for (int i = 0; i < listElement.size(); i++) {
+               bc.findAndClick(listElement.get(i).get(0));  // first element
+               bc.verifyCurrentUrl(listElement.get(i).get(1)); // second element
+           }
+       }
