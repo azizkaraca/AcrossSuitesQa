@@ -8,11 +8,11 @@ Feature: Breadcrumbs Test
 
   @Regression
   Scenario Outline: TC-05 Breadcrumbs Test
-    And User chooses an Island
+    And User selects an Island
       | gavdos |
-    And User chooses a Generator
+    And User selects a Generator
       | gen1 |
-    And User chooses a Breadcrumb
+    And User selects a Breadcrumb
       | <breadcrumbs> |
     Then  User should to be in Correct Url
       | <url> |

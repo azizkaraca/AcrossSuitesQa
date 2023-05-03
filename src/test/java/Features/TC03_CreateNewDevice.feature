@@ -9,20 +9,26 @@ Feature: Devices Creation
   @Regression
   Scenario: TC-03 Create a new Device
 
-    And User chooses an Island
+    And User selects an Island
       | gavdos |
-    And User chooses a Generator
+    And User selects a Generator
       | gen1 |
-    And User goes to Main Menu
-      | burgerMenu |
-    And User goes to Management
-      | management |
-    And User goes to InfraStructure
+    And User clicks following Buttons
+      | burgerMenu     |
+      | management     |
       | infrastructure |
-    And User goes to Devices
-      | devices |
-    Then User should to see created device in Devices Area
-      | devicesTest | TEST |
+      | devices        |
+      | addButton      |
+      | solarPanel     |
+    And User press the Tab Button on Keyboard Times
+      | 2 |
+    And User press the Enter Button on Keyboard Times
+      | 3 |
+    When User confirms the selection
+      | confirm |
+      | yes |
+    Then User should to find created device in Devices Area
+      | solarPanel | Solar |
 
 
 

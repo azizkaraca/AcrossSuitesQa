@@ -92,6 +92,21 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//h5[text()='GAVDOS/TEST']")
     private WebElement gavdosTest;
 
+    @FindBy(xpath = "//button[contains(text(),'Add')]")
+    private WebElement addButton;
+
+    @FindBy(xpath = "//div[text()='Solar Panel']")
+    private WebElement solarPanel;
+
+    @FindBy(xpath = "//button[text()='Confirm']")
+    private WebElement confirm;
+
+    @FindBy(xpath = "//button[text()='Yes']")
+    private WebElement yes;
+
+    @FindBy(xpath = "//button[text()='No']")
+    private WebElement no;
+
     WebElement myElement;
 
     public void findAndSend(String strElement, String value) {
@@ -124,6 +139,11 @@ public class DialogContent extends _Parent {
             case "gavdosIn": myElement = gavdosIn;break;
             case "devicesIn": myElement = devicesIn;break;
             case "testIn": myElement = testIn;break;
+            case "addButton": myElement = addButton;break;
+            case "solarPanel": myElement = solarPanel;break;
+            case "confirm": myElement = confirm;break;
+            case "yes": myElement = yes;break;
+            case "no": myElement = no;break;
         }
         clickFunction(myElement);
     }
@@ -140,13 +160,9 @@ public class DialogContent extends _Parent {
     public void findAndVerify(String strElement, String text) {
         switch (strElement) {
             case "devicesTest": myElement = devicesTest;break;
+            case "solarPanel": myElement = solarPanel;break;
         }
         verifyContainsText(myElement, text);
-    }
-
-    public void verifyUrl(String text)
-    {
-        verifyCurrentUrl(text);
     }
 
     public void rightClick(String strElement) {

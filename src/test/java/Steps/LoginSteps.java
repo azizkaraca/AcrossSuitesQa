@@ -30,7 +30,7 @@ public class LoginSteps {
     @Then("User Should Login Successfully")
     public void userShouldLoginSuccessfully()
     {
-        dc.findAndVerify("assertLogo");
+        dc.verifyCurrentUrl("dashboard");
     }
 
 }

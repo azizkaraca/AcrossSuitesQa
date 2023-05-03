@@ -1,51 +1,68 @@
 
 
-    And User chooses one of device from table
-    And User chooses how many device should be entered
-    When User confirms the chooses
-    Then User should to see created device in Devices Area
-
-    Then User should to be in Devices Area
-          | devices |
+  1-        When User confirms the chooses
+  1-        Then User should to see created device in Devices Area
+  1-
+  1-        Then User should to be in Devices Area
+  1-              | devices |
 
 
-    public void ctrlMM() // no need to create it into the dialogContent area
-        {
-            ctrlMMactions(); // I called it directly from parent to the steps.
-        }
+  2-       Public void ctrlMM() // no need to create it into the dialogContent area
+  2-          {
+  2-              ctrlMMactions(); // I called it directly from parent to the steps.
+  2-          }
+  2-
+  2-       Public void ctrlMMactions()   // name changed as ctrlMM and used directly in steps
+  2-          {
+  2-              Actions actions = new Actions(GWD.getDriver());
+  2-              actions.keyDown(Keys.CONTROL).sendKeys("m").sendKeys("m").keyUp(Keys.CONTROL).perform
+  2-          }
 
-    public void ctrlMMactions()
-        {
-            Actions actions = new Actions(GWD.getDriver());
-            actions.keyDown(Keys.CONTROL).sendKeys("m").sendKeys("m").keyUp(Keys.CONTROL).perform
-        }
+
+  3-         | dashboard       | dashboard       |   // this can be under "User chooses a Breadcrumb and verify current Url" in features for Breadcrumbs
+  3-         | alarms          | alarms          |
+  3-         | events          | events          |
+  3-         | data            | data            |
+  3-         | graphs          | graphs          |
+  3-         | info            | mainInfo        |
+  3-         | availability    | maintenance     |
+  3-         | devices         | devices         |
+  3-         | units           | units           |
+  3-         | registers       | registers       |
+  3-         | systemRegisters | systemRegisters |
+  3-         | process         | process         |
+  3-         | images          | image           |
+  3-         | specifications  | specifications  |
+  3-         | aggregations    | aggregations    |
+  3-         | remoteControl   | remote          |
+  3-         | reports         | reports         |
+  3-
+  3-       @And("User chooses a Breadcrumb and verify current Url")    // step definitions for top of Breadcrumbs features
+  3-          public void userChoosesABreadcrumbAndVerifyCurrentUrl(DataTable elements) {
+  3-
+  3-              List<List<String>> listElement=elements.asLists(String.class);
+  3-
+  3-              for (int i = 0; i < listElement.size(); i++) {
+  3-                  bc.findAndClick(listElement.get(i).get(0));  // first element for click function
+  3-                  bc.verifyCurrentUrl(listElement.get(i).get(1)); // second element for verify url
+  3-              }
+  3-          }
 
 
-      | dashboard       | dashboard       |
-      | alarms          | alarms          |
-      | events          | events          |
-      | data            | data            |
-      | graphs          | graphs          |
-      | info            | mainInfo        |
-      | availability    | maintenance     |
-      | devices         | devices         |
-      | units           | units           |
-      | registers       | registers       |
-      | systemRegisters | systemRegisters |
-      | process         | process         |
-      | images          | image           |
-      | specifications  | specifications  |
-      | aggregations    | aggregations    |
-      | remoteControl   | remote          |
-      | reports         | reports         |
 
-    @And("User chooses a Breadcrumb and verify current Url")
-       public void userChoosesABreadcrumbAndVerifyCurrentUrl(DataTable elements) {
+  4-            @And("User chooses how many should be entered")   // this cannot be used
+  4-            public void userChoosesHowManyDeviceShouldBeEntered(DataTable sendKeys) {
+  4-                List<String> listElement=sendKeys.asList(String.class);
+  4-                for (int i = 0; i < listElement.size(); i++) {
+  4-                    dc.keyboardsActions(listElement.get(i));
+  4-                }
+  4-            }
 
-           List<List<String>> listElement=elements.asLists(String.class);
 
-           for (int i = 0; i < listElement.size(); i++) {
-               bc.findAndClick(listElement.get(i).get(0));  // first element
-               bc.verifyCurrentUrl(listElement.get(i).get(1)); // second element
-           }
-       }
+  5-         public void dragAndDropFunction (WebElement drag, WebElement drop)   // put into _Parent class
+  5-         {
+  5-             Actions actions = new Actions(GWD.getDriver());
+  5-             waitUntilClickable(drag);
+  5-             waitUntilVisible(drop);
+  5-             actions.dragAndDrop(drag,drop).perform();
+  5-         }

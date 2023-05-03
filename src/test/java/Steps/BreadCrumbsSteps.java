@@ -1,6 +1,7 @@
 package Steps;
 
 import Pages.BreadCrumbs;
+import Pages.DialogContent;
 import Pages._Parent;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
@@ -15,8 +16,19 @@ import java.util.List;
 public class BreadCrumbsSteps extends _Parent {
 
     BreadCrumbs bc = new BreadCrumbs();
-    @And("User chooses a Breadcrumb")
-    public void userChoosesABreadcrumb(DataTable elements) {
+    DialogContent dc = new DialogContent();
+
+    @And("User selects a Generator")
+    public void userSelectsAGenerator(DataTable elements) {
+
+        List<String> listElement=elements.asList(String.class);
+
+        for (int i = 0; i < listElement.size(); i++) {
+            dc.findAndClick(listElement.get(i));
+        }
+    }
+    @And("User selects a Breadcrumb")
+    public void userSelectsABreadcrumb(DataTable elements) {
 
         List<String> listElement=elements.asList(String.class);
 

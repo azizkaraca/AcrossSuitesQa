@@ -32,6 +32,7 @@ public class LogoutSteps {
     @Then("User Should Logout Successfully")
     public void userShouldLogoutSuccessfully()
     {
+
         dc.verifyCurrentUrl("signin");
 
     }

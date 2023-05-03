@@ -9,7 +9,7 @@ Feature: Keyboard Functions Test
   @Regression
   Scenario: TC-04 Ctrl-MM
 
-    And User chooses an Island
+    And User selects an Island
       | gavdos |
 
     And User uses ctrl MM combination to open edit mode
