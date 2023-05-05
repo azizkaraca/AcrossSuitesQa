@@ -34,7 +34,6 @@ public class BreadCrumbsSteps extends _Parent {
 
         for (int i = 0; i < listElement.size(); i++) {
             bc.findAndClick(listElement.get(i));
-            System.out.println(GWD.getDriver().getCurrentUrl().toLowerCase());
         }
     }
 

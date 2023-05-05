@@ -7,7 +7,7 @@ Feature: Keyboard Functions Test
     And Change language to English
 
   @Regression
-  Scenario: TC-04 Ctrl-MM
+  Scenario: TC-05 Ctrl-MM
 
     And User selects an Island
       | gavdos |

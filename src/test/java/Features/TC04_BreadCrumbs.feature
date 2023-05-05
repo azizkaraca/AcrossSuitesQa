@@ -7,7 +7,7 @@ Feature: Breadcrumbs Test
     And Change language to English
 
   @Regression
-  Scenario Outline: TC-05 Breadcrumbs Test
+  Scenario Outline: TC-04 Breadcrumbs Test
     And User selects an Island
       | gavdos |
     And User selects a Generator
@@ -24,7 +24,7 @@ Feature: Breadcrumbs Test
       | events          | events          |
       | data            | data            |
       | graphs          | graphs          |
-      | info            | info            |
+      | info            | mainInfo        |
       | availability    | maintenance     |
       | devices         | devices         |
       | units           | units           |

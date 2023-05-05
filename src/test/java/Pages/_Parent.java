@@ -43,10 +43,21 @@ public class _Parent {
         Assert.assertTrue(element.isDisplayed());
     }
 
+    public void verifyElementNotDisplayed(WebElement element,String text)
+    {
+        waitUntilVisible(element);
+        Assert.assertFalse(element.getText().toLowerCase().contains(text.toLowerCase()));
+        //Assert.assertFalse(false);
+    }
+
     public void verifyCurrentUrl(String Text)
     {
-        wait.until(ExpectedConditions.urlContains("http"));
-        Assert.assertTrue(GWD.getDriver().getCurrentUrl().toLowerCase().contains(Text.toLowerCase()));
+
+        wait.until(ExpectedConditions.urlContains(Text)); // if url contains Cap.Letters it fails.
+        //wait.until(ExpectedConditions.urlContains("http")); // for url contains Cap.Letters, use this.
+        String str = GWD.getDriver().getCurrentUrl().toLowerCase();
+        System.out.println(str);
+        Assert.assertTrue(str.contains(Text.toLowerCase()));
 
     }
 
@@ -67,18 +78,30 @@ public class _Parent {
         js.executeScript("arguments[0].scrollIntoView();",element);
     }
 
-    public void dragAndDropFunction (WebElement drag, WebElement drop)
+    public void switchToEditMode()
     {
-        Actions actions = new Actions(GWD.getDriver());
-        waitUntilClickable(drag);
-        waitUntilVisible(drop);
-        actions.dragAndDrop(drag,drop).perform();
+        String editUrl = GWD.getDriver().getCurrentUrl().replaceAll("view","edit");
+        GWD.getDriver().get(editUrl);
     }
 
-    public void ctrlMM()
+    public void ctrlMM()  // instead of this, switchToEditMode() can be used as well!
     {
         Actions actions = new Actions(GWD.getDriver());
         actions.keyDown(Keys.CONTROL).sendKeys("m").sendKeys("m").keyUp(Keys.CONTROL).perform();
+
+    }
+
+    public void TAB()
+    {
+        Actions actions = new Actions(GWD.getDriver());
+        actions.sendKeys(Keys.TAB).perform();
+
+    }
+
+    public void ENTER()
+    {
+        Actions actions = new Actions(GWD.getDriver());
+        actions.sendKeys(Keys.ENTER).perform();
 
     }
 
