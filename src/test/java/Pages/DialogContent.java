@@ -164,7 +164,7 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//*[text()='2023']")
     private WebElement y2023;
 
-    @FindBy(xpath = "//button[text()='Save']")
+        @FindBy(xpath = "//button[text()='Save']")
     private WebElement saveButton;
 
     @FindBy(xpath = "//label[contains(text(),'Search')]/following-sibling::div//input")
@@ -216,6 +216,7 @@ public class DialogContent extends _Parent {
             case "scanRate": myElement = scanRate;break;
         }
         sendKeysFunction(myElement, value);
+
     }
 
     public void findAndClick(String strElement) {

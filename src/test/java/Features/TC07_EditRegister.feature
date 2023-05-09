@@ -7,7 +7,7 @@ Feature: Edit Device
     And Change language to English
 
   @Regression
-  Scenario: TC-06 Edit Created Devices
+  Scenario: TC-07 Edit Created Devices
 
     And User clicks following Buttons
       | burgerMenu    |
@@ -18,7 +18,6 @@ Feature: Edit Device
       | search | TestDEVICE |
 
     And User clicks following Buttons
-#      | addIcon |
       | arrowButton |
 
     And User switch to edit mode
@@ -27,13 +26,16 @@ Feature: Edit Device
       | registers |
 
     And User clicks following Buttons
-#      | addIcon |
       | edit |
 
-#
-#    And User enters data to necessary areas
-#      | displayName     | TestNameDisplay         |
-#      | registerName    | TestNameRegister        |
-#      | registerAddress | TestAddressRegister     |
-#      | scanRate        | 1200                    |
-#      | description     | TestDescriptionRegister |
+    And User edits the some data
+      | displayName  | TestNameDisplayEdit  |
+      | registerName | TestNameRegisterEdit |
+      | scanRate     | 10200             |
+
+    And User confirms the selection
+      | save |
+      | yes  |
+
+
+

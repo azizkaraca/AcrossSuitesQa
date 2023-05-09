@@ -19,8 +19,13 @@ public class _Parent {
         waitUntilVisible(element);
         waitUntilClickable(element);
         scrollToElement(element);
-        element.clear();
+        clearTextArea(element);
         element.sendKeys(value);
+    }
+
+    public void clearTextArea(WebElement element)
+    {
+        element.sendKeys((Keys.chord(Keys.CONTROL,"a",Keys.DELETE)));
     }
 
     public void clickFunction(WebElement element)
