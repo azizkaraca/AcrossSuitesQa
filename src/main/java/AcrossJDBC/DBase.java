@@ -1,4 +1,4 @@
-package Features.AcrossJDBC;
+package AcrossJDBC;
 
 import java.sql.*;
 import java.util.ArrayList;

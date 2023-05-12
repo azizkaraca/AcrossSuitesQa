@@ -1,4 +1,4 @@
-package Features.AcrossJDBC;
+package AcrossJDBC;
 
 public class AcrossJDBC {
 

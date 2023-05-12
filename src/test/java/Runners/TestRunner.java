@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-        features = {"src/test/java/Features/TC04_BreadCrumbs.feature"},
+        features = {"src/test/java/Features"},
         glue = {"Steps"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 
