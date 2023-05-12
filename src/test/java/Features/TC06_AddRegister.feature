@@ -38,3 +38,6 @@ Feature: Add Register
     And User confirms the selection
       | save |
       | yes  |
+
+#    Then User should see success message
+#    |success|success|

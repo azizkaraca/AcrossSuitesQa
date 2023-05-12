@@ -5,19 +5,20 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class GetDevices extends AcrossToken {
+public class GetData extends AcrossToken {
 
     @Test
-    public void getTest() {
+    public void getTest(){
 
         given()
-                .header("Authorization","Bearer "+ jwtToken )
+                .headers("Authorization","Bearer "+ jwtToken)
                 .contentType(ContentType.JSON)
                 .when()
-                .get("stations/24/devices?grid_view=true&language_id=en")
+                .get("users/34?customer_id=3")
                 .then()
                 .log().body()
                 .statusCode(200);
 
     }
+
 }

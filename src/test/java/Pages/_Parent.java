@@ -36,7 +36,7 @@ public class _Parent {
         element.click();
     }
 
-    public void verifyContainsText(WebElement element, String text)
+      public void verifyContainsText(WebElement element, String text)
     {
         waitUntilVisible(element);
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));

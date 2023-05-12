@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import io.cucumber.java.de.Wenn;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -74,8 +75,8 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//p[text()='devices']")
     private WebElement devicesT;
 
-//    @FindBy(xpath = "//p[contains(text(),'POWER')]")
-//    private WebElement powerRight;
+    @FindBy(xpath = "(//*[text()='Message']/following-sibling::div//textarea)")
+    private WebElement message;
 
     @FindBy(id = "item_ejv2svq3e3wft3dtu9")
     private WebElement blankArea;
@@ -179,6 +180,9 @@ public class DialogContent extends _Parent {
     @FindBy(css = "[data-testid='DeleteIcon']")
     private WebElement delete;
 
+    @FindBy(xpath = "(//*[@data-testid='DeleteIcon'])[2]")
+    private WebElement delete2;
+
     @FindBy(xpath = "//span[text()='Assets']")
     private WebElement assetsMas;
 
@@ -197,6 +201,44 @@ public class DialogContent extends _Parent {
     @FindBy(id="edit-register-scanRate")
     private WebElement scanRate;
 
+    @FindBy(xpath = "(//p[text()='Alarms'])[2]")
+    private WebElement alarms;
+
+    @FindBy(xpath = "//label[text()='Type']/following-sibling::div")
+    private WebElement type;
+
+    @FindBy(xpath = "//li[text()='Digital']")
+    private WebElement digital;
+
+    @FindBy(xpath = "//label[text()='Category']/following-sibling::div")
+    private WebElement categoryA;
+
+    @FindBy(xpath = "//span[text()='Category 1']/parent::li")
+    private WebElement category1;
+
+    @FindBy(xpath = "//label[text()='Focus Register']/following-sibling::div//button")
+    private WebElement focusRegister;
+
+    @FindBy(xpath = "//h6[text()='Across Library']")
+    private WebElement acrossLibrary;
+
+    @FindBy(xpath = "//h6[text()='TestDEVICE']")
+    private WebElement TestDEVICEin;
+
+    @FindBy(xpath = "//h6[text()='TestNameDisplayEdit']")
+    private WebElement TestNameDevice;
+
+    @FindBy(xpath = "//label[text()='Register']/following-sibling::div//button")
+    private WebElement registerEdit;
+
+    @FindBy(xpath = "//label[text()='Severity']/following-sibling::div")
+    private WebElement severity;
+
+    @FindBy(xpath = "//*[contains(text(),'success')]")
+    private WebElement success;
+
+    @FindBy(xpath = "//*[text()='Alarm']")
+    private WebElement alarmA;
 
     WebElement myElement;
 
@@ -214,6 +256,7 @@ public class DialogContent extends _Parent {
             case "registerName": myElement = registerName;break;
             case "registerAddress": myElement = registerAddress;break;
             case "scanRate": myElement = scanRate;break;
+            case "message": myElement = message;break;
         }
         sendKeysFunction(myElement, value);
 
@@ -264,6 +307,19 @@ public class DialogContent extends _Parent {
             case "assetsMas": myElement = assetsMas;break;
             case "arrowButton": myElement = arrowButton;break;
             case "blankArea": myElement = blankArea;break;
+            case "alarms": myElement = alarms;break;
+            case "type": myElement = type;break;
+            case "digital": myElement = digital;break;
+            case "categoryA": myElement = categoryA;break;
+            case "category1": myElement = category1;break;
+            case "focusRegister": myElement = focusRegister;break;
+            case "acrossLibrary": myElement = acrossLibrary;break;
+            case "TestDEVICEin": myElement = TestDEVICEin;break;
+            case "TestNameDevice": myElement = TestNameDevice;break;
+            case "delete2": myElement = delete2;break;
+            case "registerEdit": myElement = registerEdit;break;
+            case "severity": myElement = severity;break;
+            case "alarmA": myElement = alarmA;break;
         }
         clickFunction(myElement);
     }
@@ -282,6 +338,7 @@ public class DialogContent extends _Parent {
             case "devicesTest": myElement = devicesTest;break;
             case "solarPanel": myElement = solarPanel;break;
             case "TestDEVICE": myElement = TestDEVICE;break;
+            case "success": myElement = success;break;
         }
         verifyContainsText(myElement, text);
     }

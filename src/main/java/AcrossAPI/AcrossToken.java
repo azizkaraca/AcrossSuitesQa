@@ -2,14 +2,13 @@ package AcrossAPI;
 
 import io.restassured.http.ContentType;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class _AcrossToken {
+public class AcrossToken {
 
 
-    String body = "{ \"email\": \"ppc@maseurope.com\", \"password\": \"Ppc123456!\"}";
+    String login = "{ \"email\": \"ppc@maseurope.com\", \"password\": \"Ppc123456!\"}";
     //String body = "{ \"email\": \"mas@maseurope.com\", \"password\": \"ma$_@8miN%\"}";
     String jwtToken = " ";
 
@@ -20,36 +19,21 @@ public class _AcrossToken {
 
         given()
                 .contentType(ContentType.JSON)
-                .body(body)
+                .body(login)
                 .when()
                 .post("session/login")
                 .then()
                 .assertThat()
-                .log().body()
+                //.log().body()
                 .statusCode(200);
 
         jwtToken = given()
                 .contentType(ContentType.JSON)
-                .body(body)
+                .body(login)
                 .when()
                 .post("session/login")
                 .jsonPath()
                 .get("jwtToken");
     }
 
-    @Test
-    public void getFeedersTest() {
-
-        given()
-                .headers("Authorization","Bearer "+ jwtToken )
-                .headers("Authorization","Bearer "+ jwtToken )
-                .contentType(ContentType.JSON)
-                .when()
-                .get("stations/24/feeders/table?page=0&rowsPerPage=15&order=asc&rows=15&language_id=en")
-                .then()
-                .log().body()
-                .assertThat()
-                .statusCode(200);
-
-    }
 }

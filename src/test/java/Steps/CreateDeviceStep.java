@@ -15,8 +15,6 @@ public class CreateDeviceStep {
 
     DialogContent dc = new DialogContent();
 
-    WebDriverWait wait = new WebDriverWait(GWD.getDriver(),Duration.ofSeconds(2000));
-
     @And("User selects an Island")
     public void userSelectsAnIsland(DataTable elements) {
 

@@ -37,5 +37,8 @@ Feature: Edit Device
       | save |
       | yes  |
 
+#    Then User should see success message
+#      |success|success|
+
 
 
