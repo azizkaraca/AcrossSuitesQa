@@ -14,7 +14,7 @@ Feature: Add Alarm
       | assetsLibrary |
       | devicesMas    |
 
-    And User search created device name
+    And User search the item
       | search | TestDEVICE |
 
     And User clicks following Buttons

@@ -57,7 +57,7 @@ public class CreateDeviceStep {
         }
     }
 
-    @Then("User should to find created device in Devices Area")
+    @Then("User should to find the item in field")
     public void userShouldToFindCreatedDeviceInDevicesArea(DataTable elements) {
 
         List<List<String>> listElement = elements.asLists(String.class);
@@ -97,8 +97,8 @@ public class CreateDeviceStep {
 
     }
 
-    @And("User search created device name")
-    public void userSearchCreatedDeviceName(DataTable elements) {
+    @And("User search the item")
+    public void userSearchTheItem(DataTable elements) {
 
         List<List<String>> listElement = elements.asLists(String.class);
 
@@ -106,7 +106,7 @@ public class CreateDeviceStep {
 
             dc.findAndSend(listElement.get(i).get(0), listElement.get(i).get(1));
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

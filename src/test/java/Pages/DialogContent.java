@@ -71,6 +71,9 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//span[text()='Devices']")
     private WebElement devicesMas;
 
+    @FindBy(xpath = "//span[text()='Units']")
+    private WebElement unitMas;
+
     @FindBy(xpath = "//div[text()='TEST']")
     private WebElement devicesTest;
 
@@ -119,7 +122,7 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//button[text()='Confirm']")
     private WebElement confirm;
 
-    @FindBy(xpath = "//button[text()='Yes']")
+        @FindBy(xpath = "//button[text()='Yes']")
     private WebElement yes;
 
     @FindBy(xpath = "//button[text()='No']")
@@ -172,9 +175,6 @@ public class DialogContent extends _Parent {
 
     @FindBy(xpath = "//label[contains(text(),'Search')]/following-sibling::div//input")
     private WebElement search;
-
-    @FindBy(css = "[data-field='name']")
-    private WebElement testText;
 
     @FindBy(xpath = "//div[text()='TestDEVICE']")
     private WebElement TestDEVICE;
@@ -242,6 +242,16 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//*[text()='Alarm']")
     private WebElement alarmA;
 
+    @FindBy(xpath = "//label[contains(text(),'Connections')]/following-sibling::div//input")
+    private WebElement connections;
+
+    @FindBy(xpath = "//a[contains(@href,'unit')]")
+    private WebElement units;
+
+    @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]/div[2]")
+    private WebElement nameContains;
+
+
 
     WebElement myElement;
 
@@ -260,6 +270,7 @@ public class DialogContent extends _Parent {
             case "registerAddress": myElement = registerAddress;break;
             case "scanRate": myElement = scanRate;break;
             case "message": myElement = message;break;
+            case "connections": myElement = connections;break;
         }
         sendKeysFunction(myElement, value);
 
@@ -323,6 +334,8 @@ public class DialogContent extends _Parent {
             case "registerEdit": myElement = registerEdit;break;
             case "severity": myElement = severity;break;
             case "alarmA": myElement = alarmA;break;
+            case "unitMas": myElement = unitMas;break;
+            case "units": myElement = units;break;
         }
         clickFunction(myElement);
     }
@@ -342,10 +355,11 @@ public class DialogContent extends _Parent {
             case "solarPanel": myElement = solarPanel;break;
             case "TestDEVICE": myElement = TestDEVICE;break;
             case "success": myElement = success;break;
+            case "nameContains": myElement = nameContains;break;
+
         }
         verifyContainsText(myElement, text);
     }
-
 
     public void rightClick(String strElement) {
         switch (strElement) {
@@ -360,7 +374,7 @@ public class DialogContent extends _Parent {
 
     public void verifyNotDisplayed(String strElement, String value) {
         switch (strElement) {
-            case "testText": myElement = testText;break;
+            case "nameContains": myElement = nameContains;break;
         }
         verifyElementNotDisplayed(myElement,value);
     }

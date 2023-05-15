@@ -1,4 +1,4 @@
-Feature: Add Register
+Feature: Edit Device
 
   Background:
     Given Navigate to Web Page
@@ -7,14 +7,14 @@ Feature: Add Register
     And Change language to English
 
   @Regression
-  Scenario: TC-06 Add Register in Created Devices
+  Scenario: TC-07 Edit Register of Created Devices
 
     And User clicks following Buttons
       | burgerMenu    |
       | assetsLibrary |
       | devicesMas    |
 
-    And User search created device name
+    And User search the item
       | search | TestDEVICE |
 
     And User clicks following Buttons
@@ -26,18 +26,19 @@ Feature: Add Register
       | registers |
 
     And User clicks following Buttons
-      | addIcon |
+      | edit |
 
-    And User enters data to necessary areas
-      | displayName     | TestNameDisplay         |
-      | registerName    | TestNameRegister        |
-      | registerAddress | TestAddressRegister     |
-      | scanRate        | 1200                    |
-      | description     | TestDescriptionRegister |
+    And User edits the some data
+      | displayName  | TestNameDisplayEdit  |
+      | registerName | TestNameRegisterEdit |
+      | scanRate     | 10200             |
 
     And User confirms the selection
       | save |
       | yes  |
 
-#    Then User should see success message
-#    |success|success|
+    Then User should to find the item in field
+      | nameContains | TestNameDisplayEdit |
+
+
+
