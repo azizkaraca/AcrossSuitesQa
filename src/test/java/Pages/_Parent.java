@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 public class _Parent {
@@ -118,5 +121,35 @@ public class _Parent {
         waitUntilClickable(element);
         actions.contextClick(element).perform();
     }
+    public void refresh(){
+        GWD.getDriver().navigate().refresh();
+    }
+
+    public void chooseFolder(String text) throws AWTException{
+        Robot rbt = new Robot();
+
+        StringSelection stringSelection = new StringSelection("C:\\Users\\AzizKaraca\\Pictures\\"+text+".png");
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection , null);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        rbt.keyPress(KeyEvent.VK_CONTROL);
+        rbt.keyPress(KeyEvent.VK_V);
+        rbt.keyRelease(KeyEvent.VK_CONTROL);
+        rbt.keyRelease(KeyEvent.VK_V);
+
+//        for(int i=0;i<2;i++) {
+//            rbt.keyPress(KeyEvent.VK_TAB); //tuşa basıldı - down.
+//            rbt.keyRelease(KeyEvent.VK_TAB); //tuş bırakıldı - up.
+//        }
+        rbt.keyPress(KeyEvent.VK_ENTER); //tuşa basıldı - down.
+        rbt.keyRelease(KeyEvent.VK_ENTER); //tuş bırakıldı - up.
+    }
+
+
 
 }

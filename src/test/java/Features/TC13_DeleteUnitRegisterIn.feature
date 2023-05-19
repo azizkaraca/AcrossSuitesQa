@@ -1,4 +1,4 @@
-Feature: Edit Device
+Feature: Delete Device
 
   Background:
     Given Navigate to Web Page
@@ -7,7 +7,7 @@ Feature: Edit Device
     And Change language to English
 
   @Regression
-  Scenario: TC-11 Edit Created Register of Unit
+  Scenario: TC-13 Delete Register of Unit in Register
 
     And User clicks following Buttons
       | burgerMenu    |
@@ -30,16 +30,13 @@ Feature: Edit Device
     And User clicks following Buttons
       | edit |
 
-    And User edits the some data
-      | displayName  | TestNameDisplayEdit  |
-      | registerName | TestNameRegisterEdit |
-      | scanRate     | 10200                |
+    And User clicks following Buttons
+      | delete3 |
 
     And User confirms the selection
-      | save |
       | yes  |
 
-    Then User should to find the item in field
+    Then User should not find item
       | nameContains | TestNameDisplayEdit |
 
 

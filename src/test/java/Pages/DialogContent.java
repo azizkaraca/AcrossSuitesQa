@@ -185,6 +185,9 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "(//*[@data-testid='DeleteIcon'])[2]")
     private WebElement delete2;
 
+    @FindBy(xpath = "(//*[@data-testid='DeleteIcon'])[3]")
+    private WebElement delete3;
+
     @FindBy(xpath = "//span[text()='Assets']")
     private WebElement assetsMas;
 
@@ -236,7 +239,7 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//label[text()='Severity']/following-sibling::div")
     private WebElement severity;
 
-    @FindBy(xpath = "//*[contains(text(),'success')]")
+    @FindBy(xpath = "//*[contains(text(),'Success')]")
     private WebElement success;
 
     @FindBy(xpath = "//*[text()='Alarm']")
@@ -251,6 +254,8 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]/div[2]")
     private WebElement nameContains;
 
+    @FindBy(xpath = "//span[text()='Drop Image']")
+    private WebElement dropImage;
 
 
     WebElement myElement;
@@ -331,11 +336,13 @@ public class DialogContent extends _Parent {
             case "TestDEVICEin": myElement = TestDEVICEin;break;
             case "TestNameDevice": myElement = TestNameDevice;break;
             case "delete2": myElement = delete2;break;
+            case "delete3": myElement = delete3;break;
             case "registerEdit": myElement = registerEdit;break;
             case "severity": myElement = severity;break;
             case "alarmA": myElement = alarmA;break;
             case "unitMas": myElement = unitMas;break;
             case "units": myElement = units;break;
+            case "dropImage": myElement = dropImage;break;
         }
         clickFunction(myElement);
     }
