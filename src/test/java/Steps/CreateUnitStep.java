@@ -3,6 +3,7 @@ package Steps;
 import Pages.DialogContent;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 
 
 import java.util.List;
@@ -19,5 +20,10 @@ public class CreateUnitStep {
         for (int i = 0; i < listElement.size(); i++) {
                      dc.findAndClick(listElement.get(i));
         }
+    }
+
+    @Then("User should to find the item in List")
+    public void userShouldToFindTheItemInList() {
+
     }
 }

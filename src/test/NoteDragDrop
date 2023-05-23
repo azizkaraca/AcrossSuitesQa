@@ -1,0 +1,54 @@
+
+    And User switch to edit mode
+
+    And User clicks following Buttons
+      | screenIcon |
+
+    And User drag and drop
+      | screenTemplate2 | mainBoard |
+
+    And User confirms the selection
+      | yes |
+
+    @FindBy(xpath = "//p[contains(text(),'EGCP2')]/parent::div/parent::div")
+    private WebElement screenTemplate2;
+    @FindBy(id = "rglContainer")
+    private WebElement mainBoard;
+
+        WebElement source;
+        WebElement target;
+
+   @And("User drag and drop")  // put into feature
+     public void userDragAndDrop(DataTable elements) {
+
+         List<List<String>> listElement = elements.asLists(String.class);
+
+         for (int i = 0; i < listElement.size(); i++) {
+             dc.dragAndDrop(listElement.get(i).get(0), listElement.get(i).get(1));
+         }
+     }
+
+
+   public void dragAndDropFunction (WebElement drag, WebElement drop)   // put into _Parent class
+   {
+       Actions actions = new Actions(GWD.getDriver());
+       waitUntilClickable(drag);
+       waitUntilVisible(drop);
+       actions.dragAndDrop(drag,drop).perform();
+       // actions.clickAndHold(source).moveToElement(target).release(source).build();
+   }
+
+
+   public void dragAndDrop(String sourceElement, String targetElement) // put into Dialog
+    {
+        switch (sourceElement)
+        {
+            case "screenTemplate2":source = screenTemplate2;break;
+        }
+        switch (targetElement)
+        {
+            case "mainBoard":target = mainBoard;break;
+        }
+
+        dragAndDropFunction(source, target);
+    }

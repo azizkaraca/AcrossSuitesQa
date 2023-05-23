@@ -59,11 +59,11 @@
   4-            }
 
 
-  5-         public void dragAndDropFunction (WebElement drag, WebElement drop)   // put into _Parent class
-  5-         {
-  5-             Actions actions = new Actions(GWD.getDriver());
-  5-             waitUntilClickable(drag);
-  5-             waitUntilVisible(drop);
-  5-             actions.dragAndDrop(drag,drop).perform();
-  5-         }
+        public void dragAndDropFunction (WebElement drag, WebElement drop)   // put into _Parent class
+        {
+            Actions actions = new Actions(GWD.getDriver());
+            waitUntilClickable(drag);
+            waitUntilVisible(drop);
+            actions.dragAndDrop(drag,drop).perform();
+        }
 

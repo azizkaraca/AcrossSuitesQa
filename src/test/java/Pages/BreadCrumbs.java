@@ -13,54 +13,41 @@ public class BreadCrumbs extends _Parent {
 
     @FindBy(xpath = "(//p[text()='Dashboard'])[2]")
     private WebElement dashboard;
-
     @FindBy(xpath = "//p[text()='Alarms']")
     private WebElement alarms;
-
     @FindBy(xpath = "//p[text()='Events']")
     private WebElement events;
-
     @FindBy(xpath = "//p[text()='Data']")
     private WebElement data;
-
     @FindBy(xpath = "//p[text()='Graphs']")
     private WebElement graphs;
-
     @FindBy(xpath = "//p[text()='Info']")
     private WebElement info;
-
     @FindBy(xpath = "//p[text()='Availability']")
     private WebElement availability;
-
     @FindBy(xpath = "//p[text()='Devices']")
     private WebElement devices;
-
     @FindBy(xpath = "//p[text()='Units']")
     private WebElement units;
-
     @FindBy(xpath = "//p[text()='Registers']")
     private WebElement registers;
-
     @FindBy(xpath = "//p[text()='System Registers']")
     private WebElement systemRegisters;
-
     @FindBy(xpath = "//p[text()='Process']")
     private WebElement process;
-
     @FindBy(xpath = "//p[text()='Images']")
     private WebElement images;
-
     @FindBy(xpath = "//p[text()='Specifications']")
     private WebElement specifications;
-
     @FindBy(xpath = "//p[text()='Aggregations']")
     private WebElement aggregations;
-
     @FindBy(xpath = "//p[text()='Remote Control']")
     private WebElement remoteControl;
-
     @FindBy(xpath = "//p[text()='Reports']")
     private WebElement reports;
+
+    @FindBy(xpath = "//p[text()='Calculated Registers']")
+    private WebElement calculated;
 
     WebElement myElement;
 
@@ -83,6 +70,7 @@ public class BreadCrumbs extends _Parent {
             case "aggregations": myElement = aggregations;break;
             case "remoteControl": myElement = remoteControl;break;
             case "reports": myElement = reports;break;
+            case "calculated": myElement = calculated;break;
 
         }
         clickFunction(myElement);

@@ -13,6 +13,7 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
+import java.util.List;
 
 public class _Parent {
 
@@ -131,7 +132,7 @@ public class _Parent {
         StringSelection stringSelection = new StringSelection("C:\\Users\\AzizKaraca\\Pictures\\"+text+".png");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection , null);
 
-        try {
+        try {   // check available wait method here!
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
@@ -142,14 +143,12 @@ public class _Parent {
         rbt.keyRelease(KeyEvent.VK_CONTROL);
         rbt.keyRelease(KeyEvent.VK_V);
 
-//        for(int i=0;i<2;i++) {
-//            rbt.keyPress(KeyEvent.VK_TAB); //tuşa basıldı - down.
-//            rbt.keyRelease(KeyEvent.VK_TAB); //tuş bırakıldı - up.
+//        for(int i=0;i<2;i++) { //
+//            rbt.keyPress(KeyEvent.VK_TAB); // press the button - down.
+//            rbt.keyRelease(KeyEvent.VK_TAB); // release the button - up.
 //        }
-        rbt.keyPress(KeyEvent.VK_ENTER); //tuşa basıldı - down.
-        rbt.keyRelease(KeyEvent.VK_ENTER); //tuş bırakıldı - up.
+        rbt.keyPress(KeyEvent.VK_ENTER); // press the button - down.
+        rbt.keyRelease(KeyEvent.VK_ENTER); // release the button - up.
     }
-
-
 
 }
