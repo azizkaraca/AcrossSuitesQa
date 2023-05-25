@@ -1,0 +1,23 @@
+package Steps;
+
+import Pages.DialogContent;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+
+import java.util.List;
+
+public class CreateAssetStep {
+
+    DialogContent dc = new DialogContent();
+
+    @And("User goes to Assets")
+    public void userGoesToAssets(DataTable elements) {
+
+        List<String> listElement = elements.asList(String.class);
+
+        for (int i = 0; i < listElement.size(); i++) {
+            dc.findAndClick(listElement.get(i));
+        }
+    }
+}

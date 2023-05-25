@@ -1,7 +1,7 @@
 Feature: Logout Functionality
 
   Background:
-    Given Navigate to Web Page
+    Given Navigate to Web Page "http://10.10.10.79:31193/signin"
 
   @SmokeTest
   Scenario Outline: TC-02 Logout from Web Application

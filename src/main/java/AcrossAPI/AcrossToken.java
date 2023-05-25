@@ -9,13 +9,14 @@ public class AcrossToken {
 
 
     String login = "{ \"email\": \"ppc@maseurope.com\", \"password\": \"Ppc123456!\"}";
-    //String body = "{ \"email\": \"mas@maseurope.com\", \"password\": \"ma$_@8miN%\"}";
+    //String login = "{ \"email\": \"mas@maseurope.com\", \"password\": \"ma$_@8miN%\"}";
     String jwtToken = " ";
 
     @BeforeClass
     public void setup() {
 
         baseURI="http://10.10.10.79:30256/api/v1/";
+        //baseURI="http://192.168.200.160:30081/api/v1/";
 
         given()
                 .contentType(ContentType.JSON)

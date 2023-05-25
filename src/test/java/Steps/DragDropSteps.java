@@ -13,6 +13,6 @@ public class DragDropSteps {
 
     @And("User drag and drop")
     public void userDragAndDrop(DataTable elements) {
-        // wait for now
+
     }
 }

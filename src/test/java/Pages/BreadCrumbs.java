@@ -45,7 +45,6 @@ public class BreadCrumbs extends _Parent {
     private WebElement remoteControl;
     @FindBy(xpath = "//p[text()='Reports']")
     private WebElement reports;
-
     @FindBy(xpath = "//p[text()='Calculated Registers']")
     private WebElement calculated;
 

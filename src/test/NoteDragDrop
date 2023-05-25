@@ -10,7 +10,7 @@
     And User confirms the selection
       | yes |
 
-    @FindBy(xpath = "//p[contains(text(),'EGCP2')]/parent::div/parent::div")
+    @FindBy(xpath = "//p[contains(text(),'EGCP2')]/parent::div/parent::div//div")
     private WebElement screenTemplate2;
     @FindBy(id = "rglContainer")
     private WebElement mainBoard;
@@ -32,10 +32,11 @@
    public void dragAndDropFunction (WebElement drag, WebElement drop)   // put into _Parent class
    {
        Actions actions = new Actions(GWD.getDriver());
-       waitUntilClickable(drag);
+       waitUntilVisible(drag);
        waitUntilVisible(drop);
        actions.dragAndDrop(drag,drop).perform();
-       // actions.clickAndHold(source).moveToElement(target).release(source).build();
+       // actions.clickAndHold(source).moveToElement(target).release(source).build().perform();
+       // action.dragAndDrop(source, x-offset, y-offset).perform();
    }
 
 

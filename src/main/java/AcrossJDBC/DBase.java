@@ -36,6 +36,7 @@ public class DBase {
     public static void DBConnectionOpen()
     {
         String hostUrl = "jdbc:mysql://10.10.10.79:32723/ACROSS_DB";
+        //String hostUrl = "jdbc:mysql://192.168.200.160:30036/ACROSS_DB";
         String username = "basic";
         String password = "basicpass";
 

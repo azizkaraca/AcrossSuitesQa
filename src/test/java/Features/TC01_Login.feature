@@ -1,7 +1,7 @@
 Feature: Login Functionality
 
   Background:
-    Given Navigate to Web Page
+    Given Navigate to Web Page "http://10.10.10.79:31193/signin"
 
   @SmokeTest
   Scenario Outline: TC-01 Login with valid username and valid password

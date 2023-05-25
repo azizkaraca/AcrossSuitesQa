@@ -1,7 +1,7 @@
 Feature: Create Assets
 
   Background:
-    Given Navigate to Web Page
+    Given Navigate to Web Page "http://10.10.10.79:31193/signin"
     When User Enters Email "mas@maseurope.com" and Password "ma$_@8miN%" and Click Button
     Then User Should Login Successfully
     And Change language to English
@@ -42,7 +42,7 @@ Feature: Create Assets
       | save |
       | yes  |
 
-    And User goes to Units
+    And User goes to Assets
       | assets |
 
     And User search the item

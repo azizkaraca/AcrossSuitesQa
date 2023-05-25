@@ -10,10 +10,11 @@ public class LoginSteps {
 
     DialogContent dc =new DialogContent();
 
-    @Given("Navigate to Web Page")
-    public void navigateToWebPage()
+    @Given("Navigate to Web Page {string}")
+    public void navigateToWebPage(String url)
     {
-        GWD.getDriver().get("http://10.10.10.79:31193/signin");
+        GWD.getDriver().get(url);
+        //GWD.getDriver().get("http://10.10.10.79:31193/signin");
         //GWD.getDriver().get("http://192.168.200.160:30003/signin");
 
     }

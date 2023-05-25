@@ -89,6 +89,8 @@ public class DialogContent extends _Parent {
     private WebElement no;
     @FindBy(xpath = "//span[text()='Asset Library']")
     private WebElement assetsLibrary;
+    @FindBy(xpath = "//span[text()='gradient_icon']")
+    private WebElement assetsLibraryIcon;
     @FindBy(xpath = "//label[text()='Model']/following-sibling::div//input")
     private WebElement model;
     @FindBy(xpath = "//label[text()='Website']/following-sibling::div//input")
@@ -204,8 +206,17 @@ public class DialogContent extends _Parent {
     private WebElement assets;
     @FindBy(css = "[data-testid='DesktopWindowsIcon']")
     private WebElement screenIcon;
+    @FindBy(xpath = "//span[text()='Feeders']")
+    private WebElement feedersMas;
+    @FindBy(xpath = "//p[text()='feeders']")
+    private WebElement feeders;
+    @FindBy(xpath = "//p[text()='Devices']")
+    private WebElement deviceF;
+
+
 
     WebElement myElement;
+
 
     public void findAndSend(String strElement, String value) {
         switch (strElement) {
@@ -262,6 +273,7 @@ public class DialogContent extends _Parent {
             case "yes": myElement = yes;break;
             case "no": myElement = no;break;
             case "assetsLibrary": myElement = assetsLibrary;break;
+            case "assetsLibraryIcon": myElement = assetsLibraryIcon;break;
             case "manufacturer": myElement = manufacturer;break;
             case "mas": myElement = mas;break;
             case "protocol": myElement = protocol;break;
@@ -302,6 +314,9 @@ public class DialogContent extends _Parent {
             case "costKWh": myElement = costKWh;break;
             case "assets": myElement = assets;break;
             case "screenIcon": myElement = screenIcon;break;
+            case "feedersMas": myElement = feedersMas;break;
+            case "feeders": myElement = feeders;break;
+
         }
         clickFunction(myElement);
     }
@@ -344,6 +359,5 @@ public class DialogContent extends _Parent {
         }
         verifyElementNotDisplayed(myElement,value);
     }
-
 
 }

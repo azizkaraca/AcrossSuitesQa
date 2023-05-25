@@ -1,4 +1,4 @@
-Feature: Delete Device
+Feature: Drag Drop
 
   Background:
     Given Navigate to Web Page "http://10.10.10.79:31193/signin"
@@ -6,38 +6,28 @@ Feature: Delete Device
     Then User Should Login Successfully
     And Change language to English
 
+
   @Regression
-  Scenario: TC-13 Delete Register of Unit in Register
+  Scenario: Drag Drop Method Check
 
     And User clicks following Buttons
       | burgerMenu    |
       | assetsLibrary |
-      | unitMas       |
+      | assetsMas     |
 
     And User search the item
-      | search | TestUNIT |
+      | search | TestAsset |
 
     And User clicks following Buttons
       | arrowButton |
 
     And User switch to edit mode
 
-    And User selects a Breadcrumb
-      | registers |
-
-    And User refresh the page
-
     And User clicks following Buttons
-      | edit |
+      | screenIcon      |
 
-    And User clicks following Buttons
-      | delete3 |
-
-    And User confirms the selection
-      | yes  |
-
-    Then User should not find item
-      | nameContains | TestNameDisplayEdit |
-
-
-
+#    And User drag and drop
+#      | screenTemplate2 | mainBoard |
+#
+#    And User confirms the selection
+#      | no |
