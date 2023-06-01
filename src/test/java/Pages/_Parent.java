@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -81,6 +82,11 @@ public class _Parent {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList) {
+        wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
+        return elementList;
+    }
+
     public void scrollToElement(WebElement element)
     {
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
@@ -150,5 +156,6 @@ public class _Parent {
         rbt.keyPress(KeyEvent.VK_ENTER); // press the button - down.
         rbt.keyRelease(KeyEvent.VK_ENTER); // release the button - up.
     }
+
 
 }

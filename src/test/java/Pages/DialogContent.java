@@ -171,11 +171,11 @@ public class DialogContent extends _Parent {
     private WebElement connections;
     @FindBy(xpath = "//a[contains(@href,'unit')]")
     private WebElement units;
+    @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]/div[2]")
+    public List<WebElement> allList;
 
-//    @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]/div[2]")
-//    private WebElement nameContains;
 
-        @FindBy(xpath = "//div[@data-field='name']")
+    @FindBy(xpath = "//div[@data-field='name']")
     private List<WebElement> nameList;
 
     @FindBy(xpath = "(//div[@data-field='name'])[2]")
@@ -212,7 +212,10 @@ public class DialogContent extends _Parent {
     private WebElement feeders;
     @FindBy(xpath = "//p[text()='Devices']")
     private WebElement deviceF;
-
+    @FindBy(xpath = "//span[text()='Capacitors']")
+    private WebElement capacitorsMas;
+    @FindBy(xpath = "//p[text()='Capacitors']")
+    private WebElement capacitors;
 
 
     WebElement myElement;
@@ -316,6 +319,8 @@ public class DialogContent extends _Parent {
             case "screenIcon": myElement = screenIcon;break;
             case "feedersMas": myElement = feedersMas;break;
             case "feeders": myElement = feeders;break;
+            case "capacitorsMas": myElement = capacitorsMas;break;
+            case "capacitors": myElement = capacitors;break;
 
         }
         clickFunction(myElement);

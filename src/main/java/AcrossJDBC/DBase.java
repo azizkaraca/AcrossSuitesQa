@@ -1,5 +1,8 @@
 package AcrossJDBC;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -8,30 +11,34 @@ public class DBase {
     public static Connection connection;
     public static Statement statement;
 
-    public static ArrayList<ArrayList<String>> getListData(String sql) {
+    public static ArrayList<ArrayList<String>> getListData(String query) {
+
+        ArrayList<ArrayList<String>> table = new ArrayList<>();
+
         DBConnectionOpen();
-        ArrayList<ArrayList<String>> tablo = new ArrayList<>();
 
         try {
-            ResultSet rs = statement.executeQuery(sql);
+            ResultSet rs = statement.executeQuery(query);
+            ResultSetMetaData rsmd = rs.getMetaData();
+
+            for (int i = 1; i <= rsmd.getColumnCount(); i++)
+                System.out.printf("%-20s", rsmd.getColumnName(i));
+            System.out.println();
 
             while (rs.next()) {
-
-                ArrayList<String> satir = new ArrayList<>();
-                for (int i = 1; i <= rs.getMetaData().getColumnCount(); i++) {
-                    satir.add(rs.getString(i));
-                }
-
-                tablo.add(satir);
+                for (int i = 1; i <= rsmd.getColumnCount(); i++)
+                    System.out.printf("%-20s", rs.getString(i));
+                System.out.println();
             }
         }
-        catch (Exception e){
-            System.out.println("e.getMessage() = " + e.getMessage());
+        catch (Exception ex)
+        {
+            System.out.println(ex.getMessage());
         }
-        DBConnectionClose();
-        return tablo;
-    }
 
+        DBConnectionClose();
+        return table;
+    }
 
     public static void DBConnectionOpen()
     {
