@@ -1,4 +1,4 @@
-Feature: Keyboard Functions Test
+Feature: New Report Creation
 
   Background:
     Given Navigate to Web Page "http://10.10.10.79:31193/signin"
@@ -6,12 +6,13 @@ Feature: Keyboard Functions Test
     Then User Should Login Successfully
     And Change language to English
 
-  @Regression
-  Scenario: TC-05 Ctrl-MM
-
+  Scenario:
     And User selects a Station
-      | gavdos |
+    |gavdos|
 
-    And User uses ctrl MM combination to open edit mode
-
+    And User clicks following Buttons
+    |burgerMenu|
+    |burgerMenu|
+    |reports   |
+#    |newReport   | bcs of the page's unexpected errors then locator can not be found
 

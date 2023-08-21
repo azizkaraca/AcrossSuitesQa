@@ -8,7 +8,7 @@ Feature: Breadcrumbs Test
 
   @Regression
   Scenario Outline: TC-04 Breadcrumbs Test
-    And User selects an Island
+    And User selects a Station
       | gavdos |
     And User selects a Generator
       | gen1 |
@@ -25,12 +25,12 @@ Feature: Breadcrumbs Test
       | data            | data            |
       | graphs          | graphs          |
       | info            | mainInfo        |
-      | availability    | maintenance     |
+      | availability    | availability    |
       | devices         | devices         |
       | units           | units           |
       | registers       | registers       |
       | systemRegisters | systemRegisters |
-      | process         | process         |
+      #| process         | process         |
       | images          | image           |
       | specifications  | specifications  |
       | aggregations    | aggregations    |

@@ -42,8 +42,8 @@ Feature: Create Assets
       | save |
       | yes  |
 
-    And User goes to Assets
-      | assets |
+#    And User goes to Assets
+#      | assets |
 
     And User search the item
       | search | TestAsset |

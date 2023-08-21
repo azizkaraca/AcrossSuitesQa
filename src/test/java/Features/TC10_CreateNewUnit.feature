@@ -21,7 +21,7 @@ Feature: Create Unit
       | model       | TestMODELunit              |
       | webSite     | http://www.testKRCtest.com |
       | description | UnitForTest                |
-      | connections | 100                        |
+#      | connections | 100                        | -> this deleted from app
 
     And User selects necessary areas
       | manufacturer |
@@ -41,8 +41,8 @@ Feature: Create Unit
       | save |
       | yes  |
 
-    And User goes to Units
-      | units |
+#    And User goes to Units -> looks no need it, it is navigate Unit list page already
+#      | units |
 
     And User search the item
       | search | TestUNIT |

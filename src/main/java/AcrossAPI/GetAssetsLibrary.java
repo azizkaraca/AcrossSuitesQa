@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class GetRegisterLibraryTree extends AcrossToken {
+public class GetAssetsLibrary extends AcrossToken {
 
     @Test
     public void getTest(){
@@ -14,7 +14,7 @@ public class GetRegisterLibraryTree extends AcrossToken {
                 .headers("Authorization","Bearer "+ jwtToken)
                 .contentType(ContentType.JSON)
                 .when()
-                .get("library-topic-tree/registers/12871/info?extendedView=true&language_id=en")
+                .get("assets/table?page=0&rowsPerPage=100&order=asc&rows=100&language_id=en")
                 .then()
                 .log().body()
                 .statusCode(200);

@@ -1,7 +1,7 @@
 Feature: Add Device to Feeder
 
   Background:
-    Given Navigate to Web Page "http://192.168.200.160:30003/signin"
+    Given Navigate to Web Page "http://10.10.10.79:31193/signin"
     When User Enters Email "mas@maseurope.com" and Password "ma$_@8miN%" and Click Button
     Then User Should Login Successfully
     And Change language to English
@@ -10,13 +10,13 @@ Feature: Add Device to Feeder
   Scenario: TC-17 Add Device in Created Feeder
 
     And User clicks following Buttons
-#      | burgerMenu    |
-      | assetsLibraryIcon |
+      | burgerMenu    |
+#      | assetsLibraryIcon |
       | assetsLibrary     |
       | feedersMas        |
 
     And User search the item
-      | search | TestFeeders |
+      | search | Test |
 
     And User clicks following Buttons
       | arrowButton |

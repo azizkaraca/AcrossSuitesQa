@@ -1,6 +1,7 @@
 package Steps;
 
 import Pages.DialogContent;
+import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 
@@ -15,6 +16,7 @@ public class AddFolder {
     public void userChooseFolderFromPC(String text) throws AWTException {
 
         dc.chooseFolder(text);
+
 
         }
 

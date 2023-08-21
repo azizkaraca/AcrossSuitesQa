@@ -15,8 +15,8 @@ public class CreateDeviceStep {
 
     DialogContent dc = new DialogContent();
 
-    @And("User selects an Island")
-    public void userSelectsAnIsland(DataTable elements) {
+    @And("User selects a Station")
+    public void userSelectsAStation(DataTable elements) {
 
         List<String> listElement = elements.asList(String.class);
 

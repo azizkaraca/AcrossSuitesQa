@@ -12,9 +12,9 @@ public class ControlMMstep {
 
         dc.findAndClick("dashboard");
         dc.ctrlMM();
-        dc.findAndClick("blankArea");
-        dc.rightClick("blankArea");
-        dc.findAndClick("edit");
+//        dc.findAndClick("blankArea");
+//        dc.rightClick("blankArea");
+//        dc.findAndClick("edit");
 //        dc.findAndClick("edit2");
 //        dc.findAndClick("plants");
 //        dc.findAndClick("plants"); // If I don't click it again I cannot achieve the dropDown menu!

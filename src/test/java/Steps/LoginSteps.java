@@ -25,6 +25,8 @@ public class LoginSteps {
         dc.findAndSend("email",email);
         dc.findAndSend("password",password);
         dc.findAndClick("loginButton");
+        // here navigate back method can be added and check if it is navigating back or not.
+        // It should not navigate back as expected and stand in logged page !!!
 
     }
 

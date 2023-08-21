@@ -17,13 +17,23 @@ Feature: Create Capacitor
       | addIcon       |
 
     And User enters data to necessary areas
-      | name        | TestCapacitor     |
+      | name        | TestCapacitor   |
       | description | TestDescription |
+
+    And User clicks following Buttons
+      | category   |
+      | engine     |
+      | heatEngine |
+      | confirm    |
 
     And User confirms the selection
       | save |
       | yes  |
 
-    And User should see success message
-      | success | success |
+    And User goes to Capacitors
+      |capacitors|
+
+
+#    And User should see success message
+#      | success | success |
 

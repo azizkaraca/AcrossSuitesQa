@@ -1,4 +1,4 @@
-Feature: Add Folder
+Feature: Create Capacitor
 
   Background:
     Given Navigate to Web Page "http://10.10.10.79:31193/signin"
@@ -6,28 +6,32 @@ Feature: Add Folder
     Then User Should Login Successfully
     And Change language to English
 
+
   @Regression
-  Scenario: TC-14 Add folder from PC
+  Scenario: TC-19 CapacitorAlert
 
     And User clicks following Buttons
       | burgerMenu    |
       | assetsLibrary |
-      | unitMas       |
+      | capacitorsMas |
 
     And User search the item
-      | search | TestUNIT |
+      | search | TestCapacitor |
 
     And User clicks following Buttons
       | arrowButton |
-      | edit        |
-      | dropImage   |
+      | dashboardIn |
 
-    And User choose folder from PC
-      |TEST|
+    And User switch to edit mode
 
-    And User confirms the selection
-      | save |
-      | yes  |
+    And User clicks following Buttons
+      | info |
+
+    And User accepts alert
+#    it gives error when I try to accept alert by using switch to alert and still I could not handle how to do it
+
+
+
 
 
 

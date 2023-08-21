@@ -1,7 +1,6 @@
 package Pages;
 
 import Utilities.GWD;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -25,6 +24,7 @@ public class _Parent {
         waitUntilClickable(element);
         scrollToElement(element);
         clearTextArea(element);
+//        element.clear(); -> it did not work for across app. check it later!
         element.sendKeys(value);
     }
 
@@ -44,6 +44,7 @@ public class _Parent {
       public void verifyContainsText(WebElement element, String text)
     {
         waitUntilVisible(element);
+        waitUntilClickable(element);
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }
 

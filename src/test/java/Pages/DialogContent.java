@@ -59,8 +59,12 @@ public class DialogContent extends _Parent {
     private WebElement message;
     @FindBy(id = "item_ejv2svq3e3wft3dtu9")
     private WebElement blankArea;
+    @FindBy(id = "item_07hftrea4mmq018ws")
+    private WebElement blankAreaGraph;
     @FindBy(xpath = "//p[text()='DASHBOARD']")
     private WebElement dashboard;
+    @FindBy(xpath = "//p[text()='Dashboard']")
+    private WebElement dashboardIn;
     @FindBy(css = "[data-testid='EditIcon']")
     private WebElement edit;
     @FindBy (xpath = "//label[text()='Register']/following-sibling::div//button")
@@ -174,11 +178,15 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]/div[2]")
     public List<WebElement> allList;
 
+    @FindBy(xpath = "//div[@class='MuiDataGrid-row']//div[@data-field='id']")
+    public List<WebElement> idList;
+
 
     @FindBy(xpath = "//div[@data-field='name']")
     private List<WebElement> nameList;
 
-    @FindBy(xpath = "(//div[@data-field='name'])[2]")
+    //@FindBy(xpath = "(//div[@data-field='name'])[2]") --> it was working for all before but name changed in somewhere.
+    @FindBy(xpath = "(//div[contains(@data-field,'ame')])[2]")
     private WebElement nameContains;
     @FindBy(xpath = "//span[text()='Drop Image']")
     private WebElement dropImage;
@@ -216,9 +224,23 @@ public class DialogContent extends _Parent {
     private WebElement capacitorsMas;
     @FindBy(xpath = "//p[text()='Capacitors']")
     private WebElement capacitors;
+    @FindBy(xpath = "//p[text()='Info']")
+    private WebElement info;
+    @FindBy(xpath = "//div[text()='Split Air Condition']")
+    private WebElement splitAirCondition;
+    @FindBy(xpath = "//button[text()='NEW GROUP']")
+    private WebElement newGroup;
+    @FindBy(xpath = "//div[text()='ID']")
+    private WebElement idColumn;
 
+    @FindBy(xpath = "//*[contains(text(),'REPORTS')]")
+    private WebElement reports;
+
+    @FindBy(xpath = "//button[text()='New Report']")
+    private WebElement newReport;
 
     WebElement myElement;
+    List<WebElement> myElementList;
 
 
     public void findAndSend(String strElement, String value) {
@@ -262,6 +284,7 @@ public class DialogContent extends _Parent {
             case "devices": myElement = devices;break;
             case "devicesMas": myElement = devicesMas;break;
             case "dashboard": myElement = dashboard;break;
+            case "dashboardIn": myElement = dashboardIn;break;
             case "edit": myElement = edit;break;
             case "category": myElement = edit;break;
             case "edit2": myElement = edit2;break;
@@ -292,6 +315,7 @@ public class DialogContent extends _Parent {
             case "assetsMas": myElement = assetsMas;break;
             case "arrowButton": myElement = arrowButton;break;
             case "blankArea": myElement = blankArea;break;
+            case "blankAreaGraph": myElement = blankAreaGraph;break;
             case "alarms": myElement = alarms;break;
             case "type": myElement = type;break;
             case "digital": myElement = digital;break;
@@ -321,6 +345,12 @@ public class DialogContent extends _Parent {
             case "feeders": myElement = feeders;break;
             case "capacitorsMas": myElement = capacitorsMas;break;
             case "capacitors": myElement = capacitors;break;
+            case "info": myElement = info;break;
+            case "splitAirCondition": myElement = splitAirCondition;break;
+            case "newGroup": myElement = newGroup;break;
+            case "idColumn": myElement = idColumn;break;
+            case "reports": myElement = reports;break;
+            case "newReport": myElement = newReport;break;
 
         }
         clickFunction(myElement);
@@ -350,6 +380,7 @@ public class DialogContent extends _Parent {
     public void rightClick(String strElement) {
         switch (strElement) {
             case "blankArea": myElement = blankArea;break;
+            case "blankAreaGraph": myElement = blankAreaGraph;break;
         }
         mouseActions(myElement);
     }
