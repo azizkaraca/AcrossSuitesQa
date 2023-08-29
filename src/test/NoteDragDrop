@@ -18,7 +18,7 @@
         WebElement source;
         WebElement target;
 
-   @And("User drag and drop")  // put into feature
+   @And("User drag and drop")  // put into steps
      public void userDragAndDrop(DataTable elements) {
 
          List<List<String>> listElement = elements.asLists(String.class);

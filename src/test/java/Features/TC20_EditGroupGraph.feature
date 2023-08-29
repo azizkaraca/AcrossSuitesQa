@@ -13,7 +13,8 @@ Feature: Edit Group Graph
 
       And User switch to edit mode
 
-      And User right click to reach edit on graph
+      And User right click to reach edit
+      |blankAreaGraph|
 
       And User clicks following Buttons
       |newGroup|

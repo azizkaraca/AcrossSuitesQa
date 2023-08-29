@@ -96,12 +96,14 @@ public class _Parent {
 
     public void switchToEditMode()
     {
+        wait.until(ExpectedConditions.urlContains("view"));
         String editUrl = GWD.getDriver().getCurrentUrl().replaceAll("view","edit");
         GWD.getDriver().get(editUrl);
     }
 
     public void ctrlMM()  // instead of this, switchToEditMode() can be used as well!
     {
+        wait.until(ExpectedConditions.urlContains("view"));
         Actions actions = new Actions(GWD.getDriver());
         actions.keyDown(Keys.CONTROL).sendKeys("m").sendKeys("m").keyUp(Keys.CONTROL).perform();
 
@@ -158,5 +160,37 @@ public class _Parent {
         rbt.keyRelease(KeyEvent.VK_ENTER); // release the button - up.
     }
 
+    public void dragAndDropFunction (WebElement source, WebElement target)   // put into _Parent class
+    {
+        Actions actions = new Actions(GWD.getDriver());
+        waitUntilVisible(source);
+        waitUntilVisible(target);
+        actions.dragAndDrop(source, target).build().perform();
+        //actions.clickAndHold(source).moveToElement(target).release(source).build().perform();
 
+    }
+
+    public void alertOk(){
+
+        GWD.getDriver().switchTo().alert().accept();
+
+    }
+
+    public void pageSizeZoomOut(){
+
+        Robot robot = null;
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            throw new RuntimeException(e);
+        }
+
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_MINUS);
+        robot.keyRelease(KeyEvent.VK_MINUS);
+        robot.keyPress(KeyEvent.VK_MINUS);
+        robot.keyRelease(KeyEvent.VK_MINUS);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+
+    }
 }

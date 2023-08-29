@@ -47,8 +47,8 @@ public class GWD {
                         break;
 
                 }
+                threadDriver.get().manage().window().maximize();
             }
-            threadDriver.get().manage().window().maximize();
             return threadDriver.get();
     }
 

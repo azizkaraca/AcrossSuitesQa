@@ -59,7 +59,7 @@ public class DialogContent extends _Parent {
     private WebElement message;
     @FindBy(id = "item_ejv2svq3e3wft3dtu9")
     private WebElement blankArea;
-    @FindBy(id = "item_07hftrea4mmq018ws")
+    @FindBy(id = "item_wncind3faemhkswqn")  // seems it is dynamic id. check it later.
     private WebElement blankAreaGraph;
     @FindBy(xpath = "//p[text()='DASHBOARD']")
     private WebElement dashboard;
@@ -175,18 +175,18 @@ public class DialogContent extends _Parent {
     private WebElement connections;
     @FindBy(xpath = "//a[contains(@href,'unit')]")
     private WebElement units;
+
     @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]/div[2]")
     public List<WebElement> allList;
 
     @FindBy(xpath = "//div[@class='MuiDataGrid-row']//div[@data-field='id']")
     public List<WebElement> idList;
 
-
     @FindBy(xpath = "//div[@data-field='name']")
     private List<WebElement> nameList;
 
-    //@FindBy(xpath = "(//div[@data-field='name'])[2]") --> it was working for all before but name changed in somewhere.
     @FindBy(xpath = "(//div[contains(@data-field,'ame')])[2]")
+    //@FindBy(xpath = "(//div[@data-field='name'])[2]") --> it was working for all before but name changed in somewhere.
     private WebElement nameContains;
     @FindBy(xpath = "//span[text()='Drop Image']")
     private WebElement dropImage;
@@ -218,8 +218,6 @@ public class DialogContent extends _Parent {
     private WebElement feedersMas;
     @FindBy(xpath = "//p[text()='feeders']")
     private WebElement feeders;
-    @FindBy(xpath = "//p[text()='Devices']")
-    private WebElement deviceF;
     @FindBy(xpath = "//span[text()='Capacitors']")
     private WebElement capacitorsMas;
     @FindBy(xpath = "//p[text()='Capacitors']")
@@ -232,14 +230,31 @@ public class DialogContent extends _Parent {
     private WebElement newGroup;
     @FindBy(xpath = "//div[text()='ID']")
     private WebElement idColumn;
-
     @FindBy(xpath = "//*[contains(text(),'REPORTS')]")
     private WebElement reports;
-
     @FindBy(xpath = "//button[text()='New Report']")
     private WebElement newReport;
+    @FindBy(css = "[data-testid='BorderColorIcon']")
+    private WebElement generalTool;
+    @FindBy(id = "rglContainer")
+    private WebElement mainBoard;
+    @FindBy(xpath = "//p[text()='Button']/parent::div/parent::div")
+    private WebElement buttonDrag;
 
+    @FindBy (xpath = "//p[contains(text(),'EGCP2')]/parent::div/parent::div//div")
+    private WebElement template;
+    @FindBy(id = "item_22pun2rjjwkki78ns5j")
+    private WebElement buttonOn;
+
+    @FindBy(id = "image")  //heroku test
+    private WebElement source1;
+    @FindBy(id = "box")//heroku test
+    private WebElement target1;
+
+    WebElement source;
+    WebElement target;
     WebElement myElement;
+
     List<WebElement> myElementList;
 
 
@@ -351,6 +366,9 @@ public class DialogContent extends _Parent {
             case "idColumn": myElement = idColumn;break;
             case "reports": myElement = reports;break;
             case "newReport": myElement = newReport;break;
+            case "generalTool": myElement = generalTool;break;
+            case "buttonOn": myElement = buttonOn;break;
+
 
         }
         clickFunction(myElement);
@@ -381,6 +399,7 @@ public class DialogContent extends _Parent {
         switch (strElement) {
             case "blankArea": myElement = blankArea;break;
             case "blankAreaGraph": myElement = blankAreaGraph;break;
+            case "buttonOn": myElement = buttonOn;break;
         }
         mouseActions(myElement);
     }
@@ -396,4 +415,19 @@ public class DialogContent extends _Parent {
         verifyElementNotDisplayed(myElement,value);
     }
 
+    public void dragAndDrop(String sourceElement, String targetElement) // put into Dialog
+    {
+        switch (sourceElement)
+        {
+            case "buttonDrag":source = buttonDrag;break;
+            case "source1":source = source1;break;
+        }
+        switch (targetElement)
+        {
+            case "mainBoard":target = mainBoard;break;
+            case "target1":target = target1;break;
+        }
+
+        dragAndDropFunction(source, target);
+    }
 }

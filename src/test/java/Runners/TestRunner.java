@@ -3,10 +3,11 @@ package Runners;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
+
 @CucumberOptions(
 
 
-        features = {"src/test/java/Features"},
+        features = {"src/test/java/Features/AA_DragDrop.feature"},
         glue = {"Steps"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 

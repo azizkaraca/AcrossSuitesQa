@@ -25,11 +25,9 @@ Feature: Create Capacitor
     And User switch to edit mode
 
     And User clicks following Buttons
-      | info |
+      | capacitors |
 
-    And User accepts alert
-#    it gives error when I try to accept alert by using switch to alert and still I could not handle how to do it
-
+    And User accept alert
 
 
 

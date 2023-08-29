@@ -1,10 +1,9 @@
 package Steps;
 
 import Pages.DialogContent;
-import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import org.openqa.selenium.UnhandledAlertException;
+
 import java.util.List;
 
 public class CreateCapacitorStep {
@@ -21,9 +20,8 @@ public class CreateCapacitorStep {
         }
     }
 
-    @And("User accepts alert")
-    public void userAcceptsAlert() {
-        GWD.getDriver().switchTo().alert().accept();
-
+    @And("User accept alert")
+    public void userAcceptAlert() {
+        dc.alertOk();
     }
 }

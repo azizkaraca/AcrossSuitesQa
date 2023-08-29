@@ -22,6 +22,7 @@ public class LoginSteps {
     @When("User Enters Email {string} and Password {string} and Click Button")
     public void userEntersEmailAndPasswordAndClickButton(String email, String password)
     {
+        dc.pageSizeZoomOut();
         dc.findAndSend("email",email);
         dc.findAndSend("password",password);
         dc.findAndClick("loginButton");
