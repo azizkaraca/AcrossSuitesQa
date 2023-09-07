@@ -255,7 +255,7 @@ public class DialogContent extends _Parent {
     WebElement target;
     WebElement myElement;
 
-    List<WebElement> myElementList;
+//    List<WebElement> myElementList; --> I dont need it since I am not going to use any method in dc class
 
 
     public void findAndSend(String strElement, String value) {

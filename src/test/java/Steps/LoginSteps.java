@@ -13,9 +13,11 @@ public class LoginSteps {
     @Given("Navigate to Web Page {string}")
     public void navigateToWebPage(String url)
     {
-        GWD.getDriver().get(url);
-        //GWD.getDriver().get("http://10.10.10.79:31193/signin");
-        //GWD.getDriver().get("http://192.168.200.160:30003/signin");
+        GWD.getDriver().get(url); // Since QA environment is not stable and testing environment changing always according to functions!
+
+        //GWD.getDriver().get("http://10.10.10.79:31193/signin"); //QA Environment
+        //GWD.getDriver().get("http://10.10.10.91:3000/signin"); // DEV Environment
+        //GWD.getDriver().get("http://192.168.200.160:30003/signin"); // PROD Environment
 
     }
 
@@ -26,8 +28,6 @@ public class LoginSteps {
         dc.findAndSend("email",email);
         dc.findAndSend("password",password);
         dc.findAndClick("loginButton");
-        // here navigate back method can be added and check if it is navigating back or not.
-        // It should not navigate back as expected and stand in logged page !!!
 
     }
 

@@ -26,8 +26,9 @@ public class IDsortingSteps {
         for (int i = 0; i < normalList.size(); i++) {
             sortedList.add(normalList.get(i));
         }
-        Collections.sort(sortedList);
-        Collections.reverse(sortedList);
+
+        Collections.sort(sortedList,Collections.reverseOrder());
+        //Collections.reverse(sortedList);
         System.out.println(sortedList);
 
         Assert.assertEquals(normalList,sortedList);

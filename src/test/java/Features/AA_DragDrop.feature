@@ -6,3 +6,5 @@ Feature: Drag Drop Test
 
     And User drag and drop
       | source1 | target1 |
+
+
