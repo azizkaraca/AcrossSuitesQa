@@ -21,9 +21,4 @@ public class CreateUnitStep {
                      dc.findAndClick(listElement.get(i));
         }
     }
-
-    @Then("User should to find the item in List")
-    public void userShouldToFindTheItemInList() {
-
-    }
 }

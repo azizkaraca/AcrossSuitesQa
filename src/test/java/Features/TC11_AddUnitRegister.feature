@@ -1,9 +1,9 @@
 Feature: Add Register
 
   Background:
-    Given Navigate to Web Page "http://10.10.10.79:31193/signin"
-    When User Enters Email "mas@maseurope.com" and Password "ma$_@8miN%" and Click Button
-    Then User Should Login Successfully
+    Given Navigate to QA Environment
+    When Login with MAS user credentials
+    Then Login should be successfully
     And Change language to English
 
   @Regression

@@ -1,14 +1,11 @@
 package Steps;
 
 import Pages.DialogContent;
-import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 
 public class CreateDeviceStep {
@@ -58,7 +55,7 @@ public class CreateDeviceStep {
     }
 
     @Then("User should to find the item in field")
-    public void userShouldToFindCreatedDeviceInDevicesArea(DataTable elements) {
+    public void userShouldToFindTheItemInField(DataTable elements) {
 
         List<List<String>> listElement = elements.asLists(String.class);
 

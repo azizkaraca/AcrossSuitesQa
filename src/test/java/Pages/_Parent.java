@@ -18,6 +18,7 @@ import java.util.List;
 public class _Parent {
 
     WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
+
     public void sendKeysFunction(WebElement element, String value)
     {
         waitUntilVisible(element);
@@ -30,7 +31,9 @@ public class _Parent {
 
     public void clearTextArea(WebElement element)
     {
+
         element.sendKeys((Keys.chord(Keys.CONTROL,"a",Keys.DELETE)));
+
     }
 
     public void clickFunction(WebElement element)
@@ -41,7 +44,7 @@ public class _Parent {
         element.click();
     }
 
-      public void verifyContainsText(WebElement element, String text)
+    public void verifyContainsText(WebElement element, String text)
     {
         waitUntilVisible(element);
         waitUntilClickable(element);
@@ -75,15 +78,20 @@ public class _Parent {
     //methods
     public void waitUntilVisible(WebElement element)
     {
+
         wait.until(ExpectedConditions.visibilityOf(element));
+
     }
 
     public void waitUntilClickable(WebElement element)
     {
+
         wait.until(ExpectedConditions.elementToBeClickable(element));
+
     }
 
-    public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList) {
+    public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList)
+    {
         wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
         return elementList;
     }
@@ -131,11 +139,16 @@ public class _Parent {
         waitUntilClickable(element);
         actions.contextClick(element).perform();
     }
-    public void refresh(){
+
+    public void refresh()
+    {
+
         GWD.getDriver().navigate().refresh();
+
     }
 
-    public void chooseFolder(String text) throws AWTException{
+    public void chooseFolder(String text) throws AWTException
+    {
         Robot rbt = new Robot();
 
         StringSelection stringSelection = new StringSelection("C:\\Users\\AzizKaraca\\Pictures\\"+text+".png");
@@ -170,13 +183,15 @@ public class _Parent {
 
     }
 
-    public void alertOk(){
+    public void alertOk()
+    {
 
         GWD.getDriver().switchTo().alert().accept();
 
     }
 
-    public void pageSizeZoomOut(){
+    public void pageSizeZoomOut()
+    {
 
         Robot robot = null;
         try {
@@ -193,4 +208,5 @@ public class _Parent {
         robot.keyRelease(KeyEvent.VK_CONTROL);
 
     }
+
 }

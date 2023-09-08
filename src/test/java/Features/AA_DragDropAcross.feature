@@ -1,9 +1,9 @@
 Feature: Drag Drop Test
 
   Background:
-    Given Navigate to Web Page "http://10.10.10.79:31193/signin"
-    When User Enters Email "ppc@maseurope.com" and Password "Ppc123456!" and Click Button
-    Then User Should Login Successfully
+    Given Navigate to QA Environment
+    When Login with PPC user credentials
+    Then Login should be successfully
     And Change language to English
 
   Scenario: Drag Drop Test

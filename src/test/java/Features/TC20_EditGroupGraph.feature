@@ -2,7 +2,7 @@ Feature: Edit Group Graph
   Background:
     Given Navigate to Web Page "http://across.demo.i4.energy/signin"
     When User Enters Email "depan@i4.energy" and Password "Dep@n1234" and Click Button
-    Then User Should Login Successfully
+    Then Login should be successfully
 #    And Change language to English
 #    -> when trying to change language the button place is moving so locator is not finding it.
 

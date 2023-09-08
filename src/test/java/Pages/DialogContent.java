@@ -185,7 +185,7 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "//div[@data-field='name']")
     private List<WebElement> nameList;
 
-    @FindBy(xpath = "(//div[contains(@data-field,'ame')])[2]")
+    @FindBy(xpath = "(//div[contains(@data-field,'ame')])[2]") // contains of name is "ame"
     //@FindBy(xpath = "(//div[@data-field='name'])[2]") --> it was working for all before but name changed in somewhere.
     private WebElement nameContains;
     @FindBy(xpath = "//span[text()='Drop Image']")
@@ -240,9 +240,6 @@ public class DialogContent extends _Parent {
     private WebElement mainBoard;
     @FindBy(xpath = "//p[text()='Button']/parent::div/parent::div")
     private WebElement buttonDrag;
-
-    @FindBy (xpath = "//p[contains(text(),'EGCP2')]/parent::div/parent::div//div")
-    private WebElement template;
     @FindBy(id = "item_22pun2rjjwkki78ns5j")
     private WebElement buttonOn;
 
@@ -278,9 +275,9 @@ public class DialogContent extends _Parent {
             case "potentialPowerNum": myElement = potentialPowerNum;break;
             case "techMinimumNum": myElement = techMinimumNum;break;
             case "variableCostNum": myElement = variableCostNum;break;
+
         }
         sendKeysFunction(myElement, value);
-
     }
 
     public void findAndClick(String strElement) {
@@ -369,7 +366,6 @@ public class DialogContent extends _Parent {
             case "generalTool": myElement = generalTool;break;
             case "buttonOn": myElement = buttonOn;break;
 
-
         }
         clickFunction(myElement);
     }
@@ -379,6 +375,7 @@ public class DialogContent extends _Parent {
             case "assertLogo": myElement = assertLogo;break;
             case "loginButton": myElement = loginButton;break;
             case "gavdosTest": myElement = gavdosTest;break;
+
         }
         verifyElementDisplayed(myElement);
     }
@@ -400,6 +397,7 @@ public class DialogContent extends _Parent {
             case "blankArea": myElement = blankArea;break;
             case "blankAreaGraph": myElement = blankAreaGraph;break;
             case "buttonOn": myElement = buttonOn;break;
+
         }
         mouseActions(myElement);
     }
@@ -411,6 +409,7 @@ public class DialogContent extends _Parent {
     public void verifyNotDisplayed(String strElement, String value) {
         switch (strElement) {
             case "nameContains": myElement = nameContains;break;
+
         }
         verifyElementNotDisplayed(myElement,value);
     }
