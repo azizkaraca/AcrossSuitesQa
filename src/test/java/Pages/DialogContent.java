@@ -37,8 +37,10 @@ public class DialogContent extends _Parent {
     private WebElement firstName;
     @FindBy(xpath = "(//label[text()='Name']/following-sibling::div//input)[2]")
     private WebElement name;
-    @FindBy(css = "[title='GAVDOS']")
+    @FindBy(css = "[title='GAYDOS']")
     private WebElement gavdos;
+    @FindBy(css = "[title='SKYROSS']")
+    private WebElement skyross;
     @FindBy(xpath = "//p[contains(text(),'GEN 1')]")
     private WebElement gen1;
     @FindBy(xpath = "//span[text()='MANAGEMENT']")
@@ -59,7 +61,7 @@ public class DialogContent extends _Parent {
     private WebElement message;
     @FindBy(id = "item_ejv2svq3e3wft3dtu9")
     private WebElement blankArea;
-    @FindBy(id = "item_wncind3faemhkswqn")  // seems it is dynamic id. check it later.
+    @FindBy(id = "item_wncind3faemhkswqn")
     private WebElement blankAreaGraph;
     @FindBy(xpath = "//p[text()='DASHBOARD']")
     private WebElement dashboard;
@@ -167,7 +169,7 @@ public class DialogContent extends _Parent {
     private WebElement registerEdit;
     @FindBy(xpath = "//label[text()='Severity']/following-sibling::div")
     private WebElement severity;
-    @FindBy(xpath = "//*[contains(text(),'Success')]")
+    @FindBy(xpath = "//*[contains(text(),'uccess')]") // contains of success is uccess bcs of upper lower case of "S-s"
     private WebElement success;
     @FindBy(xpath = "//*[text()='Alarm']")
     private WebElement alarmA;
@@ -175,6 +177,44 @@ public class DialogContent extends _Parent {
     private WebElement connections;
     @FindBy(xpath = "//a[contains(@href,'unit')]")
     private WebElement units;
+
+    @FindBy(xpath = "(//p[text()='Dashboard'])[2]")
+    private WebElement dashboard2;
+    @FindBy(xpath = "//p[text()='Events']")
+    private WebElement events;
+    @FindBy(xpath = "//p[text()='Data']")
+    private WebElement data;
+    @FindBy(xpath = "//p[text()='Graphs']")
+    private WebElement graphs;
+    @FindBy(xpath = "//p[text()='Availability']")
+    private WebElement availability;
+    @FindBy(xpath = "//p[text()='Devices']")
+    private WebElement devices2;
+    @FindBy(xpath = "//p[text()='Units']")
+    private WebElement units2;
+    @FindBy(xpath = "//p[text()='Registers']")
+    private WebElement registers;
+    @FindBy(xpath = "//p[text()='System Registers']")
+    private WebElement systemRegisters;
+    @FindBy(xpath = "//p[text()='Process']")
+    private WebElement process;
+    @FindBy(xpath = "//p[text()='Images']")
+    private WebElement images;
+    @FindBy(xpath = "//p[text()='Specifications']")
+    private WebElement specifications;
+    @FindBy(xpath = "//p[text()='Aggregations']")
+    private WebElement aggregations;
+    @FindBy(xpath = "//p[text()='Remote Control']")
+    private WebElement remoteControl;
+    @FindBy(xpath = "//*[contains(text(),'REPORTS')]")
+    private WebElement reports;
+    @FindBy(xpath = "//p[text()='Reports']")
+    private WebElement reports2;
+    @FindBy(xpath = "//span[text()='Reports']")
+    private WebElement reportsInMenu;
+
+    @FindBy(xpath = "//p[text()='Calculated Registers']")
+    private WebElement calculated;
 
     @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]/div[2]")
     public List<WebElement> allList;
@@ -188,6 +228,8 @@ public class DialogContent extends _Parent {
     @FindBy(xpath = "(//div[contains(@data-field,'ame')])[2]") // contains of name is "ame"
     //@FindBy(xpath = "(//div[@data-field='name'])[2]") --> it was working for all before but name changed in somewhere.
     private WebElement nameContains;
+    @FindBy(xpath = "//input[@value='test11']")
+    private WebElement inputName;
     @FindBy(xpath = "//span[text()='Drop Image']")
     private WebElement dropImage;
     @FindBy (xpath = "//label[text()='Nominal Power']/following-sibling::div//input")
@@ -212,6 +254,8 @@ public class DialogContent extends _Parent {
     private WebElement costKWh;
     @FindBy(xpath = "//a[contains(@href,'assets')]")
     private WebElement assets;
+    @FindBy(xpath = "//span[text()='ASSETS']")
+    private WebElement assetsUnderInfrastructure;
     @FindBy(css = "[data-testid='DesktopWindowsIcon']")
     private WebElement screenIcon;
     @FindBy(xpath = "//span[text()='Feeders']")
@@ -230,23 +274,44 @@ public class DialogContent extends _Parent {
     private WebElement newGroup;
     @FindBy(xpath = "//div[text()='ID']")
     private WebElement idColumn;
-    @FindBy(xpath = "//*[contains(text(),'REPORTS')]")
-    private WebElement reports;
     @FindBy(xpath = "//button[text()='New Report']")
     private WebElement newReport;
     @FindBy(css = "[data-testid='BorderColorIcon']")
     private WebElement generalTool;
     @FindBy(id = "rglContainer")
     private WebElement mainBoard;
-    @FindBy(xpath = "//p[text()='Button']/parent::div/parent::div")
+    @FindBy(xpath = "//p[text()='Button']/parent::div/parent::div/parent::div")
     private WebElement buttonDrag;
     @FindBy(id = "item_22pun2rjjwkki78ns5j")
     private WebElement buttonOn;
+    @FindBy(xpath = "//button[text()='Import JSON']")
+    private WebElement importJson;
+    @FindBy(xpath = "//span[text()='Import Json']")
+    private WebElement importJsonInImport;
+    @FindBy(xpath = "//p[text()='Alarms']")
+    private WebElement alarmsInBreadCrumbs;
+    @FindBy(xpath = "//p[text()='Events']")
+    private WebElement eventsInBreadCrumbs;
+    @FindBy(xpath = "//span[text()='Tas']")
+    private WebElement tasMas;
+    @FindBy(xpath = "//span[text()='Interconnectors']")
+    private WebElement interconnectors;
+    @FindBy(xpath = "//span[text()='Pair Interconnectors']")
+    private WebElement pairInterconnectors;
+    @FindBy(xpath = "//span[text()='Internal Consumption']")
+    private WebElement internalConsumption;
+    @FindBy(css = "[data-testid='CancelIcon']")
+    private WebElement discard;
+
+    @FindBy(css = "[data-testid='PrintIcon']")
+    private WebElement printIcon;
 
     @FindBy(id = "image")  //heroku test
     private WebElement source1;
     @FindBy(id = "box")//heroku test
     private WebElement target1;
+
+
 
     WebElement source;
     WebElement target;
@@ -329,6 +394,7 @@ public class DialogContent extends _Parent {
             case "blankArea": myElement = blankArea;break;
             case "blankAreaGraph": myElement = blankAreaGraph;break;
             case "alarms": myElement = alarms;break;
+            case "alarmsInBreadCrumbs": myElement = alarmsInBreadCrumbs;break;
             case "type": myElement = type;break;
             case "digital": myElement = digital;break;
             case "categoryA": myElement = categoryA;break;
@@ -352,6 +418,7 @@ public class DialogContent extends _Parent {
             case "variableCostArr": myElement = variableCostArr;break;
             case "costKWh": myElement = costKWh;break;
             case "assets": myElement = assets;break;
+            case "assetsUnderInfrastructure": myElement = assetsUnderInfrastructure;break;
             case "screenIcon": myElement = screenIcon;break;
             case "feedersMas": myElement = feedersMas;break;
             case "feeders": myElement = feeders;break;
@@ -365,6 +432,33 @@ public class DialogContent extends _Parent {
             case "newReport": myElement = newReport;break;
             case "generalTool": myElement = generalTool;break;
             case "buttonOn": myElement = buttonOn;break;
+            case "dashboard2": myElement = dashboard2;break;
+            case "events": myElement = events;break;
+            case "data": myElement = data;break;
+            case "graphs": myElement = graphs;break;
+            case "availability": myElement = availability;break;
+            case "devices2": myElement = devices2;break;
+            case "units2": myElement = units2;break;
+            case "registers": myElement = registers;break;
+            case "systemRegisters": myElement = systemRegisters;break;
+            case "process": myElement = process;break;
+            case "images": myElement = images;break;
+            case "specifications": myElement = specifications;break;
+            case "aggregations": myElement = aggregations;break;
+            case "remoteControl": myElement = remoteControl;break;
+            case "reports2": myElement = reports2;break;
+            case "calculated": myElement = calculated;break;
+            case "importJson": myElement = importJson;break;
+            case "importJsonInImport": myElement = importJsonInImport;break;
+            case "eventsInBreadCrumbs": myElement = eventsInBreadCrumbs;break;
+            case "tasMas": myElement = tasMas;break;
+            case "interconnectors": myElement = interconnectors;break;
+            case "pairInterconnectors": myElement = pairInterconnectors;break;
+            case "internalConsumption": myElement = internalConsumption;break;
+            case "skyross": myElement = skyross;break;
+            case "reportsInMenu": myElement = reportsInMenu;break;
+            case "discard": myElement = discard;break;
+            case "printIcon": myElement = printIcon;break;
 
         }
         clickFunction(myElement);
@@ -375,6 +469,7 @@ public class DialogContent extends _Parent {
             case "assertLogo": myElement = assertLogo;break;
             case "loginButton": myElement = loginButton;break;
             case "gavdosTest": myElement = gavdosTest;break;
+            case "inputName": myElement = inputName;break;
 
         }
         verifyElementDisplayed(myElement);
@@ -387,6 +482,7 @@ public class DialogContent extends _Parent {
             case "TestDEVICE": myElement = TestDEVICE;break;
             case "success": myElement = success;break;
             case "nameContains": myElement = nameContains;break;
+            case "inputName": myElement = inputName;break;
 
         }
         verifyContainsText(myElement, text);
@@ -404,6 +500,13 @@ public class DialogContent extends _Parent {
 
     public void deleteItem(){
         clickFunction(delete);
+    }
+
+    public void waitUntilProgressFinish(String strElement){
+        switch (strElement) {
+            case "confirm": myElement = confirm;break;
+        }
+        waitUntilClickable(myElement);
     }
 
     public void verifyNotDisplayed(String strElement, String value) {

@@ -11,7 +11,7 @@ Feature: Login Functionality
     Examples:
       | Email             | Password   |
       | ppc@maseurope.com | Ppc123456! |
-      | mas@maseurope.com | ma$_@8miN% |
+#      | mas@maseurope.com | ma$_@8miN% |
 
 
 

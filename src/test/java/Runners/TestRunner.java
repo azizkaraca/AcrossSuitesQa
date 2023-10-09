@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-        features = {"src/test/java/Features/AA_DragDrop.feature"},
+        features = {"src/test/java/Features/TC24_AlarmImportJsonInLibrary.feature"},
         glue = {"Steps"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 

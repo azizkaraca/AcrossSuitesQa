@@ -1,6 +1,5 @@
 package Steps;
 
-import Pages.BreadCrumbs;
 import Pages.DialogContent;
 import Pages._Parent;
 import io.cucumber.datatable.DataTable;
@@ -11,7 +10,6 @@ import java.util.List;
 
 public class BreadCrumbsSteps extends _Parent {
 
-    BreadCrumbs bc = new BreadCrumbs();
     DialogContent dc = new DialogContent();
 
     @And("User selects a Generator")
@@ -29,7 +27,7 @@ public class BreadCrumbsSteps extends _Parent {
         List<String> listElement=elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
-            bc.findAndClick(listElement.get(i));
+            dc.findAndClick(listElement.get(i));
         }
     }
 
@@ -39,7 +37,7 @@ public class BreadCrumbsSteps extends _Parent {
         List<String> listElement=elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++)
-            bc.verifyCurrentUrl(listElement.get(i));
+            dc.verifyCurrentUrl(listElement.get(i));
 
     }
 }

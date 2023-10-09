@@ -1,7 +1,7 @@
 Feature: Drag Drop Test
 
   Background:
-    Given Navigate to QA Environment
+    Given Navigate to DEV Environment
     When Login with PPC user credentials
     Then Login should be successfully
     And Change language to English

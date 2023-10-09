@@ -19,15 +19,15 @@ Feature: Breadcrumbs Test
 
     Examples:
       | breadcrumbs     | url             |
-      | dashboard       | dashboard       |
+      | dashboard2      | dashboard       |
       | alarms          | alarms          |
       | events          | events          |
       | data            | data            |
       | graphs          | graphs          |
       | info            | mainInfo        |
       | availability    | availability    |
-      | devices         | devices         |
-      | units           | units           |
+      | devices2        | devices         |
+      | units2          | units           |
       | registers       | registers       |
       | systemRegisters | systemRegisters |
       #| process         | process         |
@@ -35,4 +35,5 @@ Feature: Breadcrumbs Test
       | specifications  | specifications  |
       | aggregations    | aggregations    |
       | remoteControl   | remote          |
-      | reports         | reports         |
+      | reports2        | reports         |
+      | calculated      | Calculated      |

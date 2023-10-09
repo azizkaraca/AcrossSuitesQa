@@ -1,0 +1,35 @@
+  Feature kisma ekle;
+
+    And User wait until element clickable to export print
+      | confirm   |
+
+
+  Step kisma ekle; dialogta parentten gelen Webelementi stringe cevirdik, stepten de string olarak cagirdik
+
+    public class PrintWaiting {
+        DialogContent dc = new DialogContent();
+        @And("User wait until element clickable to export print")
+        public void userWaitUntilElementClickableToExportPrint(String element) {
+            dc.waitUntilButtonActive(element);
+        }
+    }
+
+
+  Diaolog kisma ekle;
+
+    public void waitUntilButtonActive(String strElement){
+            switch (strElement) {
+                case "confirm": myElement = confirm;break;
+            }
+            waitUntilClickable(myElement);
+        }
+
+
+  Parent kismina ekli; buradaki wait saniyesi print islemi almak icin az kaliyor.
+
+    public void waitUntilClickable(WebElement element)
+        {
+
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+
+        }

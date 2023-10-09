@@ -23,7 +23,7 @@ Feature: Add Folder
       | dropImage   |
 
     And User choose folder from PC
-      | TEST |
+      | "C:\Users\AzizKaraca\Pictures\TEST.png"|
 
     And User confirms the selection
       | save |

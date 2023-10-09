@@ -1,6 +1,5 @@
 package Steps;
 
-import Pages.BreadCrumbs;
 import Pages.DialogContent;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -10,7 +9,6 @@ import java.util.List;
 public class EditDeviceStep {
 
     DialogContent dc = new DialogContent();
-    BreadCrumbs bc=new BreadCrumbs();
 
     @And("User switch to edit mode")
     public void userSwitchToEditMode() {

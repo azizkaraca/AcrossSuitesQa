@@ -48,6 +48,7 @@ public class _Parent {
     {
         waitUntilVisible(element);
         waitUntilClickable(element);
+        System.out.println("element.getText() = " + element.getText());
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }
 
@@ -64,14 +65,13 @@ public class _Parent {
         //Assert.assertFalse(false);
     }
 
-    public void verifyCurrentUrl(String Text)
+    public void verifyCurrentUrl(String text)
     {
 
-        wait.until(ExpectedConditions.urlContains(Text)); // if url contains Cap.Letters it fails.
-        //wait.until(ExpectedConditions.urlContains("http")); // for url contains Cap.Letters, use this.
+        waitUntilUrlContains(text); // if url contains Cap.Letters it fails.
         String str = GWD.getDriver().getCurrentUrl().toLowerCase();
         System.out.println(str);
-        Assert.assertTrue(str.contains(Text.toLowerCase()));
+        Assert.assertTrue(str.contains(text.toLowerCase()));
 
     }
 
@@ -87,6 +87,13 @@ public class _Parent {
     {
 
         wait.until(ExpectedConditions.elementToBeClickable(element));
+
+    }
+
+    public void waitUntilUrlContains(String element)
+    {
+
+        wait.until(ExpectedConditions.urlContains(element));
 
     }
 
@@ -151,7 +158,7 @@ public class _Parent {
     {
         Robot rbt = new Robot();
 
-        StringSelection stringSelection = new StringSelection("C:\\Users\\AzizKaraca\\Pictures\\"+text+".png");
+        StringSelection stringSelection = new StringSelection(text);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection , null);
 
         try {   // check available wait method here!
