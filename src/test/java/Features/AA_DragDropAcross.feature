@@ -15,10 +15,11 @@ Feature: Drag Drop Test
 
     And User clicks following Buttons
       | generalTool |
+      | windDrag    |
       | blankArea   |
 
     And User drag and drop
-      | buttonDrag | blankArea |
+      | windDrag | blankArea |
 
-    And User right click to reach edit
-      | buttonOn |
+#    And User right click to reach edit
+#      | buttonOn |

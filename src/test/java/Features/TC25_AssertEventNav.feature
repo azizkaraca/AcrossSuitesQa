@@ -27,7 +27,7 @@ Feature: Assertion of Event Navigation
     And User clicks following Buttons
       | arrowButton |
 
-    Then User verify the navigated area is correct
+    Then User verify the necessary element is displayed
       | inputName |
 
     Examples: Tas

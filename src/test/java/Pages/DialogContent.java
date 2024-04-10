@@ -37,12 +37,18 @@ public class DialogContent extends _Parent {
     private WebElement firstName;
     @FindBy(xpath = "(//label[text()='Name']/following-sibling::div//input)[2]")
     private WebElement name;
-    @FindBy(css = "[title='GAYDOS']")
+    @FindBy(css = "[title='GAVDOS']")
     private WebElement gavdos;
+    @FindBy(css = "[title='GAYDOS']")
+    private WebElement gaydos;
     @FindBy(css = "[title='SKYROSS']")
     private WebElement skyross;
+    @FindBy(css = "[title='SKYROS']")
+    private WebElement skyros;
     @FindBy(xpath = "//p[contains(text(),'GEN 1')]")
     private WebElement gen1;
+    @FindBy(xpath = "//div[contains(text(),'Gen 02')]")
+    private WebElement Gen02;
     @FindBy(xpath = "//span[text()='MANAGEMENT']")
     private WebElement management;
     @FindBy(xpath = "//span[text()='INFRASTRUCTURE']")
@@ -177,7 +183,6 @@ public class DialogContent extends _Parent {
     private WebElement connections;
     @FindBy(xpath = "//a[contains(@href,'unit')]")
     private WebElement units;
-
     @FindBy(xpath = "(//p[text()='Dashboard'])[2]")
     private WebElement dashboard2;
     @FindBy(xpath = "//p[text()='Events']")
@@ -212,7 +217,6 @@ public class DialogContent extends _Parent {
     private WebElement reports2;
     @FindBy(xpath = "//span[text()='Reports']")
     private WebElement reportsInMenu;
-
     @FindBy(xpath = "//p[text()='Calculated Registers']")
     private WebElement calculated;
 
@@ -282,6 +286,8 @@ public class DialogContent extends _Parent {
     private WebElement mainBoard;
     @FindBy(xpath = "//p[text()='Button']/parent::div/parent::div/parent::div")
     private WebElement buttonDrag;
+    @FindBy(xpath = "//p[text()='Wind Direction']/parent::div/parent::div")
+    private WebElement windDrag;
     @FindBy(id = "item_22pun2rjjwkki78ns5j")
     private WebElement buttonOn;
     @FindBy(xpath = "//button[text()='Import JSON']")
@@ -302,9 +308,22 @@ public class DialogContent extends _Parent {
     private WebElement internalConsumption;
     @FindBy(css = "[data-testid='CancelIcon']")
     private WebElement discard;
-
     @FindBy(css = "[data-testid='PrintIcon']")
     private WebElement printIcon;
+    @FindBy(css = "[value='Gen 02']")
+    private WebElement infoName;
+    @FindBy(css = "[data-testid='ChromeReaderModeOutlinedIcon']")
+    private WebElement valueTool;
+    @FindBy(xpath = "//p[text()='Complex Value']")
+    private WebElement complexValueIn;
+    @FindBy(xpath = "//p[text()='Complex Value']/parent::div/parent::div")
+    private WebElement complexValue;
+    @FindBy(xpath = "(//*[@data-testid='EditIcon'])[2]")
+    private WebElement editCheckedRule;
+    @FindBy(id = "#blockly-c")
+    private WebElement timeBlockly;
+    @FindBy(xpath = "//*[text()='seconds']")
+    private WebElement seconds;
 
     @FindBy(id = "image")  //heroku test
     private WebElement source1;
@@ -355,6 +374,7 @@ public class DialogContent extends _Parent {
             case "logout": myElement = logout;break;
             case "myAccount": myElement = myAccount;break;
             case "gavdos": myElement = gavdos;break;
+            case "gaydos": myElement = gaydos;break;
             case "gen1": myElement = gen1;break;
             case "management": myElement = management;break;
             case "infrastructure": myElement = infrastructure;break;
@@ -459,6 +479,14 @@ public class DialogContent extends _Parent {
             case "reportsInMenu": myElement = reportsInMenu;break;
             case "discard": myElement = discard;break;
             case "printIcon": myElement = printIcon;break;
+            case "windDrag": myElement = windDrag;break;
+            case "Gen02": myElement = Gen02;break;
+            case "valueTool": myElement = valueTool;break;
+            case "complexValue": myElement = complexValue;break;
+            case "editCheckedRule": myElement = editCheckedRule;break;
+            case "timeBlockly": myElement = timeBlockly;break;
+            case "seconds": myElement = seconds;break;
+            case "complexValueIn": myElement = complexValueIn;break;
 
         }
         clickFunction(myElement);
@@ -470,6 +498,7 @@ public class DialogContent extends _Parent {
             case "loginButton": myElement = loginButton;break;
             case "gavdosTest": myElement = gavdosTest;break;
             case "inputName": myElement = inputName;break;
+            case "infoName": myElement = infoName;break;
 
         }
         verifyElementDisplayed(myElement);
@@ -483,6 +512,7 @@ public class DialogContent extends _Parent {
             case "success": myElement = success;break;
             case "nameContains": myElement = nameContains;break;
             case "inputName": myElement = inputName;break;
+
 
         }
         verifyContainsText(myElement, text);
@@ -522,6 +552,7 @@ public class DialogContent extends _Parent {
         switch (sourceElement)
         {
             case "buttonDrag":source = buttonDrag;break;
+            case "windDrag":source = windDrag;break;
             case "source1":source = source1;break;
         }
         switch (targetElement)

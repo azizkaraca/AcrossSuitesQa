@@ -15,8 +15,8 @@ public class MenuLoaded {
 
     DialogContent dc = new DialogContent();
 
-    @And("User should wait until url loaded")
-    public void userShouldWaitUntilUrlLoaded(String element) {
+    @And("User should wait until url contains")
+    public void userShouldWaitUntilUrlContains(String element) {
         dc.waitUntilUrlContains(element);
     }
 }

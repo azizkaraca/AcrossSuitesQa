@@ -12,7 +12,7 @@ public class _Hooks {
     @Before
     public void before()
     {
-        System.out.println("Scenario Start"); //TODO : Check how can be added which scenario is working like "1. Scenario Started"
+        System.out.println("Scenario Start");
 
     }
 

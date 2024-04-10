@@ -1,7 +1,7 @@
 Feature: Check Right Click
 
   Background:
-    Given Navigate to QA Environment
+    Given Navigate to PROD Environment
     When Login with PPC user credentials
     Then Login should be successfully
     And Change language to English

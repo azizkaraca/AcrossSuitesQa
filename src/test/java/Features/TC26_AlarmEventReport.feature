@@ -12,7 +12,7 @@ Feature: Alarm or Event Report Export
     And User selects a Station
       | skyross |
 
-    And User should wait until url loaded
+    And User should wait until url contains
       | view |
 
     And User clicks following Buttons

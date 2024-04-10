@@ -109,10 +109,17 @@ public class _Parent {
         js.executeScript("arguments[0].scrollIntoView();",element);
     }
 
-    public void switchToEditMode()
+    public void switchToEditMode() // it is switching just from view to edit
     {
         wait.until(ExpectedConditions.urlContains("view"));
         String editUrl = GWD.getDriver().getCurrentUrl().replaceAll("view","edit");
+        GWD.getDriver().get(editUrl);
+    }
+
+    public void switchToMode(String mode1, String mode2) // it is switching via dataTable, need to give strings as from mode1, to mode2
+    {
+        wait.until(ExpectedConditions.urlContains(mode1));
+        String editUrl = GWD.getDriver().getCurrentUrl().replaceAll(mode1,mode2);
         GWD.getDriver().get(editUrl);
     }
 

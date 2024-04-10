@@ -102,11 +102,6 @@ public class CreateDeviceStep {
         for (int i = 0; i < listElement.size(); i++) {
 
             dc.findAndSend(listElement.get(i).get(0), listElement.get(i).get(1));
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
 
         }
     }

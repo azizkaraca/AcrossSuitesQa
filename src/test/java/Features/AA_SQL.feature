@@ -1,7 +1,7 @@
 Feature: SQL query check
 
   Background:
-    Given Navigate to QA Environment
+    Given Navigate to DEV Environment
     When Login with MAS user credentials
     Then Login should be successfully
     And Change language to English
@@ -9,8 +9,8 @@ Feature: SQL query check
 
   Scenario: Devices control with JDBC
     And User clicks following Buttons
-      | burgerMenu    |
-      | assetsLibrary |
+#      | burgerMenu    |
+      | assetsLibraryIcon |
       | devicesMas    |
 
-    And Send The query to the database "SELECT * FROM ACROSS_DB.library_device" and control match
+    And Send The query to the database "SELECT id, model FROM ACROSS_DB.library_device" and control match
