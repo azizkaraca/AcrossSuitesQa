@@ -15,12 +15,13 @@ Feature: Add Folder
       | unitMas       |
 
     And User search the item
-      | search | TestUNIT |
+      | search | test |
 
     And User clicks following Buttons
-      | arrowButton |
-      | edit        |
-      | dropImage   |
+      | searchButton |
+      | arrowForward |
+      | edit         |
+      | dropImage    |
 
     And User choose folder from PC
       | "C:\Users\AzizKaraca\Pictures\TEST.png"|
@@ -28,6 +29,9 @@ Feature: Add Folder
     And User confirms the selection
       | save |
       | yes  |
+
+    Then User should see success message
+      | success | success |
 
 
 

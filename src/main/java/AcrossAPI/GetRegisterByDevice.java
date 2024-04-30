@@ -14,7 +14,7 @@ public class GetRegisterByDevice extends AcrossToken {
                 .headers("Authorization","Bearer "+ jwtToken)
                 .contentType(ContentType.JSON)
                 .when()
-                .get("devices/1467/registers/table?page=0&rowsPerPage=15&order=asc&rows=15&language_id=en")
+                .get("stations/22/assets/717/registers/table?page=0&rows=100&rowsPerPage=100&order=asc&stationId=22&machineType=assets&machineId=717&language_id=en")
                 .then()
                 .log().body()
                 .statusCode(200);

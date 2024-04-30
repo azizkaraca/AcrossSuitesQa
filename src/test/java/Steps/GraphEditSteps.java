@@ -19,7 +19,7 @@ public class GraphEditSteps {
         for (int i = 0; i < listElement.size(); i++) {
             dc.findAndClick(listElement.get(i));
             dc.rightClick(listElement.get(i));
-            dc.findAndClick("edit");
+            dc.findAndClick("pencilIcon");
         }
 
 //        dc.findAndClick("blankAreaGraph");

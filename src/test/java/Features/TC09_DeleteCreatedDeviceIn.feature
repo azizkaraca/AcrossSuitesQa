@@ -18,7 +18,8 @@ Feature: Devices Creation
       | search | TestDEVICE |
 
     And User clicks following Buttons
-      | arrowButton |
+      | searchButton |
+      | arrowForward |
 
     When User delete selected item
 

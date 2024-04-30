@@ -14,14 +14,14 @@ Feature: Create Feeders
       | burgerMenu    |
       | assetsLibrary |
       | feedersMas    |
-      | addIcon       |
+      | newAdd        |
 
     And User enters data to necessary areas
       | name        | TestFeeders     |
       | description | TestDescription |
 
     And User selects necessary areas
-      | category   |
+      | pencilIcon   |
       | engine     |
       | heatEngine |
       | confirm    |
@@ -35,6 +35,9 @@ Feature: Create Feeders
 
     And User search the item
       | search | TestFeeders |
+
+    And User clicks following Buttons
+      | searchButton |
 
     Then User should to find the item in field
       | nameContains | TestFeeders |

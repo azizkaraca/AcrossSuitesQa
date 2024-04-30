@@ -14,4 +14,7 @@ Feature: Keyboard Functions Test
 
     And User uses ctrl MM combination to open edit mode
 
+    Then  User should to be in Correct Url
+      | edit |
+
 

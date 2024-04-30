@@ -21,7 +21,7 @@ public class LoginSteps {
     @Given("Navigate to QA Environment")
     public void navigateToQAEnvironment()
     {
-        GWD.getDriver().get("http://10.10.10.79:30003/signin");
+        GWD.getDriver().get("http://acrossqa.demo.i4.energy/signin");
     }
     @Given("Navigate to DEV Environment")
     public void navigateToDEVEnvironment()

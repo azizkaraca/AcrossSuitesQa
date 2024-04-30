@@ -1,7 +1,7 @@
 Feature: Drag Drop Test
 
   Background:
-    Given Navigate to DEV Environment
+    Given Navigate to QA Environment
     When Login with PPC user credentials
     Then Login should be successfully
     And Change language to English
@@ -16,10 +16,9 @@ Feature: Drag Drop Test
     And User clicks following Buttons
       | generalTool |
       | windDrag    |
-      | blankArea   |
 
     And User drag and drop
       | windDrag | blankArea |
 
-#    And User right click to reach edit
-#      | buttonOn |
+    And User right click to reach edit
+      | windDrag |

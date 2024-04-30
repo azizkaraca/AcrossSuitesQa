@@ -13,7 +13,7 @@ Feature: Devices Creation
       | burgerMenu    |
       | assetsLibrary |
       | devicesMas    |
-      | addIcon       |
+      | newDevice     |
 
     And User enters data to necessary areas
       | name        | TestDEVICE                 |
@@ -45,16 +45,13 @@ Feature: Devices Creation
     And User search the item
       | search | TestDEVICE |
 
+    And User clicks following Buttons
+      |searchButton|
+
     Then User should to find the item in field
       | nameContains | TestDEVICE |
 
-  #    Then User should to find created device in Devices Area
-#      | TestDEVICE | TestDEVICE |
 
-#    When User delete selected item
-#
-#    Then User should not find item
-#      | testText | TestDEVICE |
 
 
 

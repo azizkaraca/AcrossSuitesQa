@@ -15,7 +15,7 @@ public class AcrossToken {
     @BeforeClass
     public void setup() {
 
-        baseURI="http://10.10.10.79:30256/api/v1/";
+        baseURI="http://acrossqa.demo.i4.energy/deno-api/api/v1/";
         //baseURI="http://192.168.200.160:30081/api/v1/";
 
         given()

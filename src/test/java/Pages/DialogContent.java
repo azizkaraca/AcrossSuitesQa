@@ -25,6 +25,14 @@ public class DialogContent extends _Parent {
     private WebElement languageButton;
     @FindBy(xpath = "//h4[text()='English']")
     private WebElement english;
+    @FindBy (xpath = "//h4[text()='En']/parent::div")
+    private WebElement languageSwitch;
+    @FindBy (xpath = "(//h4[text()='En']/parent::div)[3]")
+    private WebElement languageSwitch2;
+    @FindBy (xpath = "//h4[text()='El']/parent::div")
+    private WebElement languageEl;
+    @FindBy (xpath = "(//h4[text()='El']/parent::div)[2]")
+    private WebElement languageEl2;
     @FindBy(css = "[data-testid='MenuIcon']")
     private WebElement burgerMenu;
     @FindBy(css = "[data-testid='ExpandMoreIcon']")
@@ -73,8 +81,10 @@ public class DialogContent extends _Parent {
     private WebElement dashboard;
     @FindBy(xpath = "//p[text()='Dashboard']")
     private WebElement dashboardIn;
-    @FindBy(css = "[data-testid='EditIcon']")
+    @FindBy(xpath = "//span[text()='edit']")
     private WebElement edit;
+    @FindBy(css = "[data-testid='EditIcon']")
+    private WebElement pencilIcon;
     @FindBy (xpath = "//label[text()='Register']/following-sibling::div//button")
     private WebElement edit2;
     @FindBy(xpath = "//h6[text()='Plants']")
@@ -91,6 +101,8 @@ public class DialogContent extends _Parent {
     private WebElement addButton;
     @FindBy(css = "[data-testid='AddIcon']")
     private WebElement addIcon;
+    @FindBy(xpath = "//button[contains(text(),'New')]")
+    private WebElement newAdd;
     @FindBy(xpath = "//div[text()='Solar Panel']")
     private WebElement solarPanel;
     @FindBy(xpath = "//button[text()='Confirm']")
@@ -107,7 +119,7 @@ public class DialogContent extends _Parent {
     private WebElement model;
     @FindBy(xpath = "//label[text()='Website']/following-sibling::div//input")
     private WebElement webSite;
-    @FindBy(xpath = "//label[text()='Description']/following-sibling::div//textarea")
+    @FindBy(xpath = "//label[text()='Description']//following::textarea[1]")
     private WebElement description;
     @FindBy(xpath = "(//label[text()='Manufacturer']/following::div)[1]")
     private WebElement manufacturer;
@@ -133,11 +145,13 @@ public class DialogContent extends _Parent {
     private WebElement saveButton;
     @FindBy(xpath = "//label[contains(text(),'Search')]/following-sibling::div//input")
     private WebElement search;
+    @FindBy(xpath = "//span[text()='search']")
+    private WebElement searchButton;
     @FindBy(xpath = "//div[text()='TestDEVICE']")
     private WebElement TestDEVICE;
     @FindBy(css = "[data-testid='DeleteIcon']")
     private WebElement delete;
-    @FindBy(xpath = "(//*[@data-testid='DeleteIcon'])[2]")
+    @FindBy(xpath = "//button[text()='Delete']")
     private WebElement delete2;
     @FindBy(xpath = "(//*[@data-testid='DeleteIcon'])[3]")
     private WebElement delete3;
@@ -145,13 +159,16 @@ public class DialogContent extends _Parent {
     private WebElement assetsMas;
     @FindBy(css = "[data-testid='ArrowForwardIcon']")
     private WebElement arrowButton;
-    @FindBy(id="edit-display-name")
+    @FindBy(xpath = "//span[text()='arrow_forward']")
+    private WebElement arrowForward;
+    @FindBy(xpath = "//label[text()='Display Name']//following::input[2]")
     private WebElement displayName;
-    @FindBy(id="edit-register-name")
+    @FindBy(xpath = "//label[text()='Register Name']/following-sibling::div//input")
+    //    @FindBy(id="edit-register-name")
     private WebElement registerName;
-    @FindBy(id="edit-register-address")
+    @FindBy(xpath = "//label[text()='Address']//following::input[1]")
     private WebElement registerAddress;
-    @FindBy(id="edit-register-scanRate")
+    @FindBy(xpath = "//label[text()='Scan Rate']//following::input[1]")
     private WebElement scanRate;
     @FindBy(xpath = "(//p[text()='Alarms'])[2]")
     private WebElement alarms;
@@ -487,6 +504,16 @@ public class DialogContent extends _Parent {
             case "timeBlockly": myElement = timeBlockly;break;
             case "seconds": myElement = seconds;break;
             case "complexValueIn": myElement = complexValueIn;break;
+            case "searchButton": myElement = searchButton;break;
+            case "arrowForward": myElement = arrowForward;break;
+            case "newAdd": myElement = newAdd;break;
+            case "languageSwitch": myElement = languageSwitch;break;
+            case "languageSwitch2": myElement = languageSwitch2;break;
+            case "languageEl": myElement = languageEl;break;
+            case "languageEl2": myElement = languageEl2;break;
+            case "displayName": myElement = displayName;break;
+            case "description": myElement = description;break;
+            case "pencilIcon": myElement = pencilIcon;break;
 
         }
         clickFunction(myElement);
@@ -529,7 +556,7 @@ public class DialogContent extends _Parent {
     }
 
     public void deleteItem(){
-        clickFunction(delete);
+        clickFunction(delete2);
     }
 
     public void waitUntilProgressFinish(String strElement){
@@ -559,6 +586,7 @@ public class DialogContent extends _Parent {
         {
             case "mainBoard":target = mainBoard;break;
             case "target1":target = target1;break;
+            case "blankArea":target = blankArea;break;
         }
 
         dragAndDropFunction(source, target);

@@ -18,9 +18,8 @@ Feature: Edit Device
       | search | TestDEVICE |
 
     And User clicks following Buttons
-      | arrowButton |
-
-    And User switch to edit mode
+      | searchButton |
+      | arrowForward |
 
     And User selects a Breadcrumb
       | registers |

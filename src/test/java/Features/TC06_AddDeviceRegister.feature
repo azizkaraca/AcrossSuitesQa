@@ -18,22 +18,35 @@ Feature: Add Register
       | search | TestDEVICE |
 
     And User clicks following Buttons
-      | arrowButton |
-
-    And User switch to edit mode
+      | searchButton |
+      | arrowForward |
 
     And User selects a Breadcrumb
       | registers |
 
     And User clicks following Buttons
-      | addIcon |
+      | newAdd |
 
     And User enters data to necessary areas
-      | displayName     | TestNameDisplay         |
       | registerName    | TestNameRegister        |
+      | displayName     | TestNameDisplay         |
+      | description     | TestDescriptionRegister |
       | registerAddress | TestAddressRegister     |
       | scanRate        | 1200                    |
-      | description     | TestDescriptionRegister |
+
+    And User clicks following Buttons
+      | languageSwitch |
+      | languageEl     |
+
+    And User enters data to necessary areas
+      | displayName | TestNameDisplayEl |
+
+    And User clicks following Buttons
+      | languageSwitch |
+      | languageEl2    |
+
+    And User enters data to necessary areas
+      | description | TestDescriptionRegisterEl |
 
     And User confirms the selection
       | save |

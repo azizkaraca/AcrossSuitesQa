@@ -1,11 +1,13 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -39,6 +41,14 @@ public class _Parent {
     public void clickFunction(WebElement element)
     {
         waitUntilClickable(element);
+        waitUntilVisible(element);
+        scrollToElement(element);
+        element.click();
+    }
+
+    public void clickFunctionForMove(WebElement element)
+    {
+        //waitUntilClickable(element);
         waitUntilVisible(element);
         scrollToElement(element);
         element.click();
@@ -111,7 +121,7 @@ public class _Parent {
 
     public void switchToEditMode() // it is switching just from view to edit
     {
-        wait.until(ExpectedConditions.urlContains("view"));
+        wait.until(ExpectedConditions.urlContains("view")); // "view" is not exist in the url for QA env
         String editUrl = GWD.getDriver().getCurrentUrl().replaceAll("view","edit");
         GWD.getDriver().get(editUrl);
     }
@@ -125,7 +135,8 @@ public class _Parent {
 
     public void ctrlMM()  // instead of this, switchToEditMode() can be used as well!
     {
-        wait.until(ExpectedConditions.urlContains("view"));
+        //wait.until(ExpectedConditions.urlContains("stations")); //"view" is not exist in the url for QA env
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("appsContentContainer"))); //it is not clean coding
         Actions actions = new Actions(GWD.getDriver());
         actions.keyDown(Keys.CONTROL).sendKeys("m").sendKeys("m").keyUp(Keys.CONTROL).perform();
 
@@ -187,9 +198,10 @@ public class _Parent {
         rbt.keyRelease(KeyEvent.VK_ENTER); // release the button - up.
     }
 
-    public void dragAndDropFunction (WebElement source, WebElement target)   // put into _Parent class
+    public void dragAndDropFunction (WebElement source, WebElement target)
     {
         Actions actions = new Actions(GWD.getDriver());
+       //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dropItemList")));
         waitUntilVisible(source);
         waitUntilVisible(target);
         actions.dragAndDrop(source, target).build().perform();

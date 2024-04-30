@@ -12,7 +12,8 @@ public class EditDeviceStep {
 
     @And("User switch to edit mode")
     public void userSwitchToEditMode() {
-        dc.switchToEditMode();
+       // dc.switchToEditMode(); in QA env there is no "view" to swith it "edit"
+        dc.ctrlMM();
     }
 
     @And("User edits the some data")
