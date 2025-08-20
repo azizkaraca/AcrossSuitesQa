@@ -23,10 +23,10 @@ public class LoginSteps {
     public void navigateToQAEnvironment() {GWD.getDriver().get("https://across-qa-v3.demo.i4.energy");}
 
     @When("User Enters Email {string} and Password {string} and Click Button")
-    public void userEntersEmailAndPasswordAndClickButton(String email, String password)
+    public void userEntersEmailAndPasswordAndClickButton(String username, String password)
     {
         dc.pageSizeZoomOut();
-        dc.findAndSend("email",email);
+        dc.findAndSend("username",username);
         dc.findAndSend("password",password);
 
         do {    //it might be changed as up to a certain number of trials.
@@ -43,7 +43,7 @@ public class LoginSteps {
     public void loginWithMASUserCredentials()
     {
         dc.pageSizeZoomOut();
-        dc.findAndSend("email","mas@maseurope.com");
+        dc.findAndSend("username","mas@maseurope.com");
         dc.findAndSend("password","CurlsUsherSellsRecapMustangMesh");
         dc.findAndClick("loginButton");
     }
@@ -52,7 +52,7 @@ public class LoginSteps {
     public void loginWithQAUserCredentials()
     {
         dc.pageSizeZoomOut();
-        dc.findAndSend("email","qualityassurance");
+        dc.findAndSend("username","qualityassurance");
         dc.findAndSend("password","qa123456!");
         dc.findAndClick("loginButton");
     }

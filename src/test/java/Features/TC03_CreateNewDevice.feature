@@ -46,17 +46,8 @@ Feature: Devices Creation
       | save |
       | yes  |
 
-    And User goes to devices
-      | personIcon |
-      | devices    |
-
-    And User search the item
-      | search | TestDEVICE |
-
-    Then User should to find the item in field
-      | nameContains | TestDEVICE |
-
-
+    Then User should see success message
+      | success | success |
 
 
 

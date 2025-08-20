@@ -14,7 +14,7 @@ public class DialogContent extends _Parent {
     }
 
     @FindBy(css = "[name='username']")
-    private WebElement email;
+    private WebElement username;
     @FindBy(css = "[type='Password']")
     private WebElement password;
     @FindBy(id = "kc-login")
@@ -206,7 +206,7 @@ public class DialogContent extends _Parent {
     private WebElement reportsInMenu;
     @FindBy(xpath = "//p[text()='Calculated Registers']")
     private WebElement calculated;
-    @FindBy(xpath = "(//div[contains(@data-field,'ame')])[2]") // contains of name is "ame"
+    @FindBy(xpath = "(//div[contains(@data-field,'ame')])[2]//div") // contains of name is "ame"
     private WebElement nameContains;
     @FindBy(xpath = "//input[@value='test11']")
     private WebElement inputName;
@@ -306,9 +306,9 @@ public class DialogContent extends _Parent {
     private WebElement Templates;
     @FindBy(xpath = "//img[@alt='User Logo']")
     private WebElement userLogo;
-    @FindBy(xpath = "((//h4[text()='En'])//preceding::i)[2]")
+    @FindBy(xpath = "(//label[text()='Name']/following-sibling::div//i)")
     private WebElement english;
-    @FindBy(xpath = "//h4[text()='El']")
+    @FindBy(xpath = "//i[@class='flag flag-24 flag-gr']")
     private WebElement greek;
     @FindBy (xpath = "//span[text()='Shareable']")
     private WebElement shareable;
@@ -337,7 +337,7 @@ public class DialogContent extends _Parent {
 
     public void findAndSend(String strElement, String value) {
         switch (strElement) {
-            case "email": myElement = email;break;
+            case "username": myElement = username;break;
             case "password": myElement = password;break;
             case "firstName": myElement = firstName;break;
             case "name": myElement = name;break;
