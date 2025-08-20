@@ -13,18 +13,22 @@ public class DialogContent extends _Parent {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(css = "[type='email']")
+    @FindBy(css = "[name='username']")
     private WebElement email;
     @FindBy(css = "[type='Password']")
     private WebElement password;
-    @FindBy(xpath = "//button[text()='Login']")
+    @FindBy(id = "kc-login")
     private WebElement loginButton;
     @FindBy(css = "[alt='DEH-logo']")
     private WebElement assertLogo;
+    @FindBy(id = "proceed-button")
+    private WebElement sendAnyway;
     @FindBy(css = "[aria-controls='language-switcher']")
     private WebElement languageButton;
-    @FindBy(xpath = "//h4[text()='English']")
-    private WebElement english;
+    @FindBy(css = "[role='progressbar']")
+    private WebElement progressbar;
+    @FindBy(xpath = "//h4[text()='En']")
+    private WebElement en;
     @FindBy (xpath = "//h4[text()='En']/parent::div")
     private WebElement languageSwitch;
     @FindBy (xpath = "(//h4[text()='En']/parent::div)[3]")
@@ -37,6 +41,8 @@ public class DialogContent extends _Parent {
     private WebElement burgerMenu;
     @FindBy(css = "[data-testid='ExpandMoreIcon']")
     private WebElement downArrow;
+    @FindBy(xpath = "(//*[@data-testid='PersonIcon'])[1]")
+    private WebElement personIcon;
     @FindBy(xpath = "//div[(text()='Logout')]")
     private WebElement logout;
     @FindBy(xpath = "//div[text()='My Account']")
@@ -45,32 +51,10 @@ public class DialogContent extends _Parent {
     private WebElement firstName;
     @FindBy(xpath = "(//label[text()='Name']/following-sibling::div//input)[2]")
     private WebElement name;
-    @FindBy(css = "[title='GAVDOS']")
-    private WebElement gavdos;
-    @FindBy(css = "[title='GAYDOS']")
-    private WebElement gaydos;
-    @FindBy(css = "[title='SKYROSS']")
-    private WebElement skyross;
-    @FindBy(css = "[title='SKYROS']")
-    private WebElement skyros;
-    @FindBy(xpath = "//p[contains(text(),'GEN 1')]")
-    private WebElement gen1;
-    @FindBy(xpath = "//div[contains(text(),'Gen 02')]")
-    private WebElement Gen02;
     @FindBy(xpath = "//span[text()='MANAGEMENT']")
     private WebElement management;
-    @FindBy(xpath = "//span[text()='INFRASTRUCTURE']")
-    private WebElement infrastructure;
-    @FindBy(xpath = "//span[text()='DEVICES']")
-    private WebElement devices;
     @FindBy(xpath = "//span[text()='Devices']")
-    private WebElement devicesMas;
-    @FindBy(xpath = "//span[text()='Units']")
-    private WebElement unitMas;
-    @FindBy(xpath = "//div[text()='TEST']")
-    private WebElement devicesTest;
-    @FindBy(xpath = "//p[text()='devices']")
-    private WebElement devicesT;
+    private WebElement devices;
     @FindBy(xpath = "(//*[text()='Message']/following-sibling::div//textarea)")
     private WebElement message;
     @FindBy(id = "item_ejv2svq3e3wft3dtu9")
@@ -79,29 +63,19 @@ public class DialogContent extends _Parent {
     private WebElement blankAreaGraph;
     @FindBy(xpath = "//p[text()='DASHBOARD']")
     private WebElement dashboard;
-    @FindBy(xpath = "//p[text()='Dashboard']")
-    private WebElement dashboardIn;
+    @FindBy(xpath = "//alt[text()='User Logo']")
+    private WebElement acrossLogo;
     @FindBy(xpath = "//span[text()='edit']")
     private WebElement edit;
-    @FindBy(css = "[data-testid='EditIcon']")
-    private WebElement pencilIcon;
+    @FindBy(css = "//span[text()='category']")
+    private WebElement category;
     @FindBy (xpath = "//label[text()='Register']/following-sibling::div//button")
     private WebElement edit2;
-    @FindBy(xpath = "//h6[text()='Plants']")
-    private WebElement plants;
-    @FindBy(xpath = "//h6[text()='GAVDOS']")
-    private WebElement gavdosIn;
-    @FindBy(xpath = "//h6[text()='Devices']")
-    private WebElement devicesIn;
-    @FindBy(xpath = "//h6[text()='TEST']")
-    private WebElement testIn;
-    @FindBy(xpath = "//h5[text()='GAVDOS/TEST']")
-    private WebElement gavdosTest;
     @FindBy(xpath = "//button[contains(text(),'Add')]")
     private WebElement addButton;
     @FindBy(css = "[data-testid='AddIcon']")
     private WebElement addIcon;
-    @FindBy(xpath = "//button[contains(text(),'New')]")
+    @FindBy(xpath = "//span[contains(text(),'add')]")
     private WebElement newAdd;
     @FindBy(xpath = "//div[text()='Solar Panel']")
     private WebElement solarPanel;
@@ -111,17 +85,15 @@ public class DialogContent extends _Parent {
     private WebElement yes;
     @FindBy(xpath = "//button[text()='No']")
     private WebElement no;
-    @FindBy(xpath = "//span[text()='Asset Library']")
-    private WebElement assetsLibrary;
-    @FindBy(xpath = "//span[text()='gradient_icon']")
-    private WebElement assetsLibraryIcon;
+    @FindBy(xpath = "//span[text()='Library']")
+    private WebElement library;
     @FindBy(xpath = "//label[text()='Model']/following-sibling::div//input")
     private WebElement model;
     @FindBy(xpath = "//label[text()='Website']/following-sibling::div//input")
     private WebElement webSite;
-    @FindBy(xpath = "//label[text()='Description']//following::textarea[1]")
+    @FindBy(xpath = "//label[text()='Description']//following::input[2]")
     private WebElement description;
-    @FindBy(xpath = "(//label[text()='Manufacturer']/following::div)[1]")
+    @FindBy(xpath = "//label[text()='Manufacturer']//following::div")
     private WebElement manufacturer;
     @FindBy(xpath = "//span[text()='MAS']")
     private WebElement mas;
@@ -176,7 +148,7 @@ public class DialogContent extends _Parent {
     private WebElement type;
     @FindBy(xpath = "//li[text()='Digital']")
     private WebElement digital;
-    @FindBy(xpath = "//label[text()='Category']/following-sibling::div")
+    @FindBy(xpath = "//label[text()='Category']/following-sibling::div//input")
     private WebElement categoryA;
     @FindBy(xpath = "//span[text()='Category 1']/parent::li")
     private WebElement category1;
@@ -212,8 +184,6 @@ public class DialogContent extends _Parent {
     private WebElement availability;
     @FindBy(xpath = "//p[text()='Devices']")
     private WebElement devices2;
-    @FindBy(xpath = "//p[text()='Units']")
-    private WebElement units2;
     @FindBy(xpath = "//p[text()='Registers']")
     private WebElement registers;
     @FindBy(xpath = "//p[text()='System Registers']")
@@ -236,18 +206,7 @@ public class DialogContent extends _Parent {
     private WebElement reportsInMenu;
     @FindBy(xpath = "//p[text()='Calculated Registers']")
     private WebElement calculated;
-
-    @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]/div[2]")
-    public List<WebElement> allList;
-
-    @FindBy(xpath = "//div[@class='MuiDataGrid-row']//div[@data-field='id']")
-    public List<WebElement> idList;
-
-    @FindBy(xpath = "//div[@data-field='name']")
-    private List<WebElement> nameList;
-
     @FindBy(xpath = "(//div[contains(@data-field,'ame')])[2]") // contains of name is "ame"
-    //@FindBy(xpath = "(//div[@data-field='name'])[2]") --> it was working for all before but name changed in somewhere.
     private WebElement nameContains;
     @FindBy(xpath = "//input[@value='test11']")
     private WebElement inputName;
@@ -255,9 +214,9 @@ public class DialogContent extends _Parent {
     private WebElement dropImage;
     @FindBy (xpath = "//label[text()='Nominal Power']/following-sibling::div//input")
     private WebElement nominalPowerNum;
-    @FindBy (xpath = "//label[text()='Nominal Power']/following-sibling::div//div")
+    @FindBy (xpath = "//label[text()='Nominal Power']/following-sibling::div//div//div")
     private WebElement nominalPowerArr;
-    @FindBy (xpath = "//li[text()='Kilowatt (kW)']")
+    @FindBy (xpath = "[aria-label='Kilowatt']")
     private WebElement powerKW;
     @FindBy (xpath = "//label[text()='Potential Power']/following-sibling::div//input")
     private WebElement potentialPowerNum;
@@ -341,16 +300,36 @@ public class DialogContent extends _Parent {
     private WebElement timeBlockly;
     @FindBy(xpath = "//*[text()='seconds']")
     private WebElement seconds;
+    @FindBy(xpath = "//span[text()='Custom Data Template']")
+    private WebElement customDataTemplate;
+    @FindBy(xpath = "//span[text()='Templates']")
+    private WebElement Templates;
+    @FindBy(xpath = "//img[@alt='User Logo']")
+    private WebElement userLogo;
+    @FindBy(xpath = "((//h4[text()='En'])//preceding::i)[2]")
+    private WebElement english;
+    @FindBy(xpath = "//h4[text()='El']")
+    private WebElement greek;
+    @FindBy (xpath = "//span[text()='Shareable']")
+    private WebElement shareable;
 
-    @FindBy(id = "image")  //heroku test
-    private WebElement source1;
-    @FindBy(id = "box")//heroku test
-    private WebElement target1;
+    // List Elements locate below this line
+
+    @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]//div[@data-field='name']")
+    public List<WebElement> customDataTableList;
+
+    @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]/div[2]")
+    public List<WebElement> allList;
+
+    @FindBy(xpath = "//div[contains(@class,'MuiDataGrid-row')]//div[@data-field='id']")
+    public List<WebElement> idList;
+
+    @FindBy(xpath = "//div[@data-field='name']")
+    public List<WebElement> nameList;
 
 
-
-    WebElement source;
-    WebElement target;
+    WebElement source; // it is created for drag and drop.
+    WebElement target; // it is created for drag and drop.
     WebElement myElement;
 
 //    List<WebElement> myElementList; --> I dont need it since I am not going to use any method in dc class
@@ -385,35 +364,23 @@ public class DialogContent extends _Parent {
         switch (strElement) {
             case "loginButton": myElement = loginButton;break;
             case "languageButton": myElement = languageButton;break;
-            case "english": myElement = english;break;
             case "burgerMenu": myElement = burgerMenu;break;
             case "downArrow": myElement = downArrow;break;
             case "logout": myElement = logout;break;
             case "myAccount": myElement = myAccount;break;
-            case "gavdos": myElement = gavdos;break;
-            case "gaydos": myElement = gaydos;break;
-            case "gen1": myElement = gen1;break;
             case "management": myElement = management;break;
-            case "infrastructure": myElement = infrastructure;break;
             case "devices": myElement = devices;break;
-            case "devicesMas": myElement = devicesMas;break;
             case "dashboard": myElement = dashboard;break;
-            case "dashboardIn": myElement = dashboardIn;break;
             case "edit": myElement = edit;break;
-            case "category": myElement = edit;break;
+            case "category": myElement = category;break;
             case "edit2": myElement = edit2;break;
-            case "plants": myElement = plants;break;
-            case "gavdosIn": myElement = gavdosIn;break;
-            case "devicesIn": myElement = devicesIn;break;
-            case "testIn": myElement = testIn;break;
             case "addButton": myElement = addButton;break;
             case "addIcon": myElement = addIcon;break;
             case "solarPanel": myElement = solarPanel;break;
             case "confirm": myElement = confirm;break;
             case "yes": myElement = yes;break;
             case "no": myElement = no;break;
-            case "assetsLibrary": myElement = assetsLibrary;break;
-            case "assetsLibraryIcon": myElement = assetsLibraryIcon;break;
+            case "library": myElement = library;break;
             case "manufacturer": myElement = manufacturer;break;
             case "mas": myElement = mas;break;
             case "protocol": myElement = protocol;break;
@@ -425,7 +392,6 @@ public class DialogContent extends _Parent {
             case "year": myElement = year;break;
             case "2023": myElement = y2023;break;
             case "save": myElement = saveButton;break;
-            case "devicesT": myElement = devicesT;break;
             case "assetsMas": myElement = assetsMas;break;
             case "arrowButton": myElement = arrowButton;break;
             case "blankArea": myElement = blankArea;break;
@@ -445,7 +411,6 @@ public class DialogContent extends _Parent {
             case "registerEdit": myElement = registerEdit;break;
             case "severity": myElement = severity;break;
             case "alarmA": myElement = alarmA;break;
-            case "unitMas": myElement = unitMas;break;
             case "units": myElement = units;break;
             case "dropImage": myElement = dropImage;break;
             case "nominalPowerArr": myElement = nominalPowerArr;break;
@@ -475,7 +440,6 @@ public class DialogContent extends _Parent {
             case "graphs": myElement = graphs;break;
             case "availability": myElement = availability;break;
             case "devices2": myElement = devices2;break;
-            case "units2": myElement = units2;break;
             case "registers": myElement = registers;break;
             case "systemRegisters": myElement = systemRegisters;break;
             case "process": myElement = process;break;
@@ -492,12 +456,10 @@ public class DialogContent extends _Parent {
             case "interconnectors": myElement = interconnectors;break;
             case "pairInterconnectors": myElement = pairInterconnectors;break;
             case "internalConsumption": myElement = internalConsumption;break;
-            case "skyross": myElement = skyross;break;
             case "reportsInMenu": myElement = reportsInMenu;break;
             case "discard": myElement = discard;break;
             case "printIcon": myElement = printIcon;break;
             case "windDrag": myElement = windDrag;break;
-            case "Gen02": myElement = Gen02;break;
             case "valueTool": myElement = valueTool;break;
             case "complexValue": myElement = complexValue;break;
             case "editCheckedRule": myElement = editCheckedRule;break;
@@ -513,7 +475,15 @@ public class DialogContent extends _Parent {
             case "languageEl2": myElement = languageEl2;break;
             case "displayName": myElement = displayName;break;
             case "description": myElement = description;break;
-            case "pencilIcon": myElement = pencilIcon;break;
+            case "customDataTemplate": myElement = customDataTemplate;break;
+            case "Templates": myElement = Templates;break;
+            case "sendAnyway": myElement = sendAnyway;break;
+            case "userLogo": myElement = userLogo;break;
+            case "personIcon": myElement = personIcon;break;
+            case "english": myElement = english;break;
+            case "greek": myElement = greek;break;
+            case "shareable": myElement = shareable;break;
+
 
         }
         clickFunction(myElement);
@@ -523,17 +493,26 @@ public class DialogContent extends _Parent {
         switch (strElement) {
             case "assertLogo": myElement = assertLogo;break;
             case "loginButton": myElement = loginButton;break;
-            case "gavdosTest": myElement = gavdosTest;break;
             case "inputName": myElement = inputName;break;
             case "infoName": myElement = infoName;break;
+            case "acrossLogo": myElement = acrossLogo;break;
 
         }
         verifyElementDisplayed(myElement);
     }
 
+    public void findAndClickLong(String strElement)
+    {
+        switch (strElement)
+        {
+            case "sendAnyway": myElement = sendAnyway;break;
+            case "saveButton": myElement = saveButton;break;
+        }
+        clickLongFunction(myElement);
+    }
+
     public void findAndVerify(String strElement, String text) {
         switch (strElement) {
-            case "devicesTest": myElement = devicesTest;break;
             case "solarPanel": myElement = solarPanel;break;
             case "TestDEVICE": myElement = TestDEVICE;break;
             case "success": myElement = success;break;
@@ -552,7 +531,7 @@ public class DialogContent extends _Parent {
             case "buttonOn": myElement = buttonOn;break;
 
         }
-        mouseActions(myElement);
+        rightClickActions(myElement);
     }
 
     public void deleteItem(){
@@ -580,12 +559,10 @@ public class DialogContent extends _Parent {
         {
             case "buttonDrag":source = buttonDrag;break;
             case "windDrag":source = windDrag;break;
-            case "source1":source = source1;break;
         }
         switch (targetElement)
         {
             case "mainBoard":target = mainBoard;break;
-            case "target1":target = target1;break;
             case "blankArea":target = blankArea;break;
         }
 

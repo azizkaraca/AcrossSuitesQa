@@ -3,6 +3,7 @@ Feature: Drag Drop Test
   Background:
     Given Navigate to QA Environment
     When Login with PPC user credentials
+    And User should accept secure alert
     Then Login should be successfully
     And Change language to English
 

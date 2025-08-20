@@ -14,7 +14,7 @@ Feature: Create Assets
       | burgerMenu    |
       | assetsLibrary |
       | assetsMas     |
-      | addIcon       |
+      | newAdd        |
 
     And User enters data to necessary areas
       | name              | TestAsset       |

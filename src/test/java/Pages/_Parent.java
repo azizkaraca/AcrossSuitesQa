@@ -23,12 +23,14 @@ public class _Parent {
 
     public void sendKeysFunction(WebElement element, String value)
     {
+
         waitUntilVisible(element);
         waitUntilClickable(element);
         scrollToElement(element);
         clearTextArea(element);
 //        element.clear(); -> it did not work for across app. check it later!
         element.sendKeys(value);
+
     }
 
     public void clearTextArea(WebElement element)
@@ -44,35 +46,53 @@ public class _Parent {
         waitUntilVisible(element);
         scrollToElement(element);
         element.click();
+
+    }
+
+    public void clickLongFunction (WebElement element)
+    {
+//        waitUntilVisible(element);
+        waitUntilClickable(element);
+        Actions actions = new Actions(GWD.getDriver());
+        actions.clickAndHold(element).pause(2000).release().perform();
+
     }
 
     public void clickFunctionForMove(WebElement element)
     {
-        //waitUntilClickable(element);
+
+//        waitUntilClickable(element);
         waitUntilVisible(element);
         scrollToElement(element);
         element.click();
+
     }
 
     public void verifyContainsText(WebElement element, String text)
     {
+
         waitUntilVisible(element);
-        waitUntilClickable(element);
+//        waitUntilClickable(element);
         System.out.println("element.getText() = " + element.getText());
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
+
     }
 
     public void verifyElementDisplayed(WebElement element)
     {
+
         waitUntilVisible(element);
         Assert.assertTrue(element.isDisplayed());
+
     }
 
     public void verifyElementNotDisplayed(WebElement element,String text)
     {
+
         waitUntilVisible(element);
         Assert.assertFalse(element.getText().toLowerCase().contains(text.toLowerCase()));
         //Assert.assertFalse(false);
+
     }
 
     public void verifyCurrentUrl(String text)
@@ -100,41 +120,63 @@ public class _Parent {
 
     }
 
+    public void waitUntilInvisible(WebElement element)
+    {
+
+        wait.until(ExpectedConditions.invisibilityOf(element));
+
+    }
+
     public void waitUntilUrlContains(String element)
     {
 
         wait.until(ExpectedConditions.urlContains(element));
 
     }
+    public void waitUntilTitleIs(String element)
+    {
+
+        wait.until(ExpectedConditions.titleIs(element));
+
+    }
 
     public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList)
     {
+
         wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
         return elementList;
+
     }
 
     public void scrollToElement(WebElement element)
     {
+
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();",element);
+
     }
 
     public void switchToEditMode() // it is switching just from view to edit
     {
+
         wait.until(ExpectedConditions.urlContains("view")); // "view" is not exist in the url for QA env
         String editUrl = GWD.getDriver().getCurrentUrl().replaceAll("view","edit");
         GWD.getDriver().get(editUrl);
+
     }
 
     public void switchToMode(String mode1, String mode2) // it is switching via dataTable, need to give strings as from mode1, to mode2
     {
+
         wait.until(ExpectedConditions.urlContains(mode1));
         String editUrl = GWD.getDriver().getCurrentUrl().replaceAll(mode1,mode2);
         GWD.getDriver().get(editUrl);
+
     }
 
     public void ctrlMM()  // instead of this, switchToEditMode() can be used as well!
     {
+
         //wait.until(ExpectedConditions.urlContains("stations")); //"view" is not exist in the url for QA env
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("appsContentContainer"))); //it is not clean coding
         Actions actions = new Actions(GWD.getDriver());
@@ -144,6 +186,7 @@ public class _Parent {
 
     public void TAB()
     {
+
         Actions actions = new Actions(GWD.getDriver());
         actions.sendKeys(Keys.TAB).perform();
 
@@ -151,18 +194,29 @@ public class _Parent {
 
     public void ENTER()
     {
+
         Actions actions = new Actions(GWD.getDriver());
         actions.sendKeys(Keys.ENTER).perform();
 
     }
 
-    public void mouseActions (WebElement element)
+    public void ESC()
     {
+
+        Actions actions = new Actions(GWD.getDriver());
+        actions.sendKeys(Keys.ESCAPE).perform();
+
+    }
+
+    public void rightClickActions (WebElement element)
+    {
+
         Actions actions = new Actions(GWD.getDriver());
         scrollToElement(element);
         waitUntilVisible(element);
         waitUntilClickable(element);
         actions.contextClick(element).perform();
+
     }
 
     public void refresh()
@@ -174,6 +228,7 @@ public class _Parent {
 
     public void chooseFolder(String text) throws AWTException
     {
+
         Robot rbt = new Robot();
 
         StringSelection stringSelection = new StringSelection(text);
@@ -196,10 +251,12 @@ public class _Parent {
 //        }
         rbt.keyPress(KeyEvent.VK_ENTER); // press the button - down.
         rbt.keyRelease(KeyEvent.VK_ENTER); // release the button - up.
+
     }
 
     public void dragAndDropFunction (WebElement source, WebElement target)
     {
+
         Actions actions = new Actions(GWD.getDriver());
        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dropItemList")));
         waitUntilVisible(source);

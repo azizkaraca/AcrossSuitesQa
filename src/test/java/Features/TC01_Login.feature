@@ -7,7 +7,7 @@ Feature: Login Functionality
 #  Scenario Outline: TC-01 Login with valid username and valid password
     Scenario: TC-01 Login with valid username and valid password
 #    When User Enters Email "<Email>" and Password "<Password>" and Click Button
-    When Login with MAS user credentials
+    When Login with QA user credentials
     Then Login should be successfully
 
 #    Examples:

@@ -19,16 +19,16 @@ public class IDsortingSteps {
         List<String> sortedList = new ArrayList<>();
 
         for (WebElement element : elementList) {
-            normalList.add(element.getText());
+            normalList.add(element.getText()); // took the UI IDs
         }
         System.out.println(normalList);
 
-        for (int i = 0; i < normalList.size(); i++) {
-            sortedList.add(normalList.get(i));
+        for (WebElement element : elementList) {
+            sortedList.add(element.getText()); // added the new list to make sort and assertion of appeared IDs
         }
 
-        Collections.sort(sortedList,Collections.reverseOrder());
-        //Collections.reverse(sortedList);
+        Collections.sort(sortedList,Collections.reverseOrder()); // first sorting (Z to A) if something comes wrong form UI
+        Collections.reverse(sortedList); // after reverse (A to Z) to check if UI and reversed ID list is correct
         System.out.println(sortedList);
 
         Assert.assertEquals(normalList,sortedList);

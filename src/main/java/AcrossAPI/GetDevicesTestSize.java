@@ -17,7 +17,7 @@ public class GetDevicesTestSize extends AcrossToken {
 
         int records =
                 given()
-                        .headers("Authorization", "Bearer " + jwtToken)
+                        .headers("Authorization", "Bearer " + jwtToken) // there is blank after Bearer
                         .contentType(ContentType.JSON)
                         .when()
                         .get("stations/22/devices?grid_view=true&language_id=en?page=0&rows=100&rowsPerPage=100&order=asc&stationId=22&machineType=devices&language_id=en")

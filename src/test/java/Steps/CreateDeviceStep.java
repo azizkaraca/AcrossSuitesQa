@@ -44,6 +44,22 @@ public class CreateDeviceStep {
             dc.ENTER();
     }
 
+    @And("User press the Esc Button on Keyboard Times")
+    public void userPressTheEscButtonOnKeyboardTimes(int times) {
+        for (int i = 0; i < times; i++)
+            dc.ESC();
+    }
+
+    @And("User changes languages of relevant fields")
+    public void userChangesLanguagesOfRelevantFields(DataTable element) {
+
+        List<String> listElement = element.asList(String.class);
+
+        for (int i = 0; i < listElement.size(); i++)
+            dc.findAndClick(listElement.get(i));
+
+    }
+
     @And("User confirms the selection")
     public void userConfirmsTheSelection(DataTable elements) {
 

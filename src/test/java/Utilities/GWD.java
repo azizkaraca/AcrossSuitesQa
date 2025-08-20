@@ -2,8 +2,11 @@ package Utilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 import org.slf4j.impl.SimpleLogger;
 
 import java.util.Locale;
@@ -34,12 +37,16 @@ public class GWD {
 
                     case "chrome":
                         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
-                        threadDriver.set(new ChromeDriver());
+                        ChromeOptions chromeOptions = new ChromeOptions(); // if incognito not desired so delete this raw and delete below which include "opt"
+                        chromeOptions.addArguments("--incognito"); // incognito mode
+                        threadDriver.set(new ChromeDriver(chromeOptions)); // chromeOptions for incognito
                         break;
 
                     case "firefox":
                         System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
-                        threadDriver.set(new FirefoxDriver());
+                        FirefoxOptions firefoxOptions = new FirefoxOptions(); // for private mode
+                        firefoxOptions.addArguments("-private"); // private mode
+                        threadDriver.set(new FirefoxDriver(firefoxOptions)); // firefoxOptions fo private mode
                         break;
 
                     case "safari":

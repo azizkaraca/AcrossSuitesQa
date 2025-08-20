@@ -1,10 +1,10 @@
 Feature: SQL query check
 
   Background:
-    Given Navigate to DEV Environment
-    When Login with MAS user credentials
+    Given Navigate to DEMO Environment
+    When Login with DEMO user credentials
     Then Login should be successfully
-    And Change language to English
+#    And Change language to English
 
 
   Scenario: Devices control with JDBC

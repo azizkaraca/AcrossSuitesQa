@@ -8,16 +8,11 @@ public class LogoutSteps {
 
     DialogContent dc = new DialogContent();
 
-    @And("Change language to English")
-    public void changeLanguageToEnglish() {
-        dc.findAndClick("languageButton");
-        dc.findAndClick("english");
-            }
-
     @And("Go to MyAccount")
     public void goToMyAccount()
     {
-        dc.findAndClick("burgerMenu");
+
+        dc.findAndClick("personIcon");
         dc.findAndClick("downArrow");
 
     }
@@ -33,7 +28,7 @@ public class LogoutSteps {
     public void userShouldLogoutSuccessfully()
     {
 
-        dc.verifyCurrentUrl("signin");
+        dc.waitUntilTitleIs("Sign in to across");
 
     }
 
