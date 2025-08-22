@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd11023e-6ed0-490d-8f1c-306ddf49ce30" name="Changes" comment="20250822_Update XMLFiles">
+      <change afterPath="$PROJECT_DIR$/Test Reports/TestReport 25-08-22 13.57/test-output/SparkReport/Spark.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-Runners.SmokeTestRunner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-Runners.SmokeTestRunner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;azizkaraca&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="84c058bf-c35a-441d-98a2-7c91c605838b" />
+        <option name="url" value="https://github.com/azizkaraca/AcrossQaTestSuites" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/Pages/DialogContent.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectCucumberState">
+    <option name="filterByTags" value="false" />
+    <option name="selection" value="" />
+  </component>
+  <component name="ProjectId" id="2O5Pnls9a2ehKLT7oBsj2nCZiUb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AzizKaraca/IdeaProjects/AcrossQaTestSuites&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3448276&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossTestSuites\src\test\java\Features" />
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossTestSuites\src\test" />
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossTestSuites\src\test\java\XML_Files" />
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossTestSuites\src\test\java\Runners" />
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossTestSuites\src\test\java\Pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossQaTestSuites\src\test\java\XML_Files" />
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossQaTestSuites\src\test\resources" />
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossQaTestSuites\target\test-classes" />
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossQaTestSuites" />
+      <recent name="C:\Users\AzizKaraca\IdeaProjects\AcrossTestSuites\src\test" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="AcrossAPI" />
+      <recent name="Steps" />
+      <recent name="Pages" />
+      <recent name="Utilities" />
+      <recent name="AcrossRestAssured" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/AzizKaraca/IdeaProjects/AcrossQaTestSuites/testng.xml">
+    <configuration name="Feature: TC01_Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/Features/TC01_Login.feature" />
+      <option name="GLUE" value="Steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="AcrossTestSuites" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: TC01_Login" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: TC02_Logout" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/Features/TC02_Logout.feature" />
+      <option name="GLUE" value="Steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="AcrossTestSuites" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: TC02_Logout" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: TC03_CreateNewDevice" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/Features/TC03_CreateNewDevice.feature" />
+      <option name="GLUE" value="Steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="AcrossTestSuites" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: TC03_CreateNewDevice" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/AzizKaraca/IdeaProjects/AcrossQaTestSuites/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AcrossTestSuites" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmokeTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AcrossTestSuites" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Runners" />
+      <option name="MAIN_CLASS_NAME" value="Runners.SmokeTestRunner" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/AzizKaraca/IdeaProjects/AcrossQaTestSuites/testng.xml" />
+        <item itemvalue="TestNG.SmokeTestRunner" />
+        <item itemvalue="Cucumber Java.Feature: TC03_CreateNewDevice" />
+        <item itemvalue="Cucumber Java.Feature: TC02_Logout" />
+        <item itemvalue="Cucumber Java.Feature: TC01_Login" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd11023e-6ed0-490d-8f1c-306ddf49ce30" name="Changes" comment="" />
+      <created>1680847641445</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680847641445</updated>
+      <workItem from="1695363455889" duration="4695000" />
+      <workItem from="1695387334653" duration="631000" />
+      <workItem from="1695730379006" duration="704000" />
+      <workItem from="1696249884733" duration="314000" />
+      <workItem from="1696250247802" duration="141000" />
+      <workItem from="1696842727207" duration="752000" />
+      <workItem from="1696857254768" duration="83000" />
+      <workItem from="1697439378115" duration="1175000" />
+      <workItem from="1697798034543" duration="612000" />
+      <workItem from="1712649913196" duration="4344000" />
+    </task>
+    <task id="LOCAL-00001" summary="03.05 updated">
+      <created>1683112927414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683112927414</updated>
+    </task>
+    <task id="LOCAL-00002" summary="05.05 updated">
+      <created>1683295329805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683295329805</updated>
+    </task>
+    <task id="LOCAL-00003" summary="08.05 updated">
+      <created>1683613690027</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683613690027</updated>
+    </task>
+    <task id="LOCAL-00004" summary="09.05 updated">
+      <created>1683640607845</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683640607845</updated>
+    </task>
+    <task id="LOCAL-00005" summary="10.05 updated">
+      <created>1683871950551</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683871950551</updated>
+    </task>
+    <task id="LOCAL-00006" summary="10.05 updated">
+      <created>1683899618779</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683899618779</updated>
+    </task>
+    <task id="LOCAL-00007" summary="15.05 updated">
+      <created>1684158660647</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684158660647</updated>
+    </task>
+    <task id="LOCAL-00008" summary="18.05 updated">
+      <created>1684478307161</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684478307161</updated>
+    </task>
+    <task id="LOCAL-00009" summary="22.05 updated">
+      <created>1684825868996</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684825868996</updated>
+    </task>
+    <task id="LOCAL-00010" summary="24.05 updated">
+      <created>1684997827995</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684997827995</updated>
+    </task>
+    <task id="LOCAL-00011" summary="31.05 updated">
+      <created>1685623644889</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685623644889</updated>
+    </task>
+    <task id="LOCAL-00012" summary="21.08 updated">
+      <created>1692612464946</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692612464946</updated>
+    </task>
+    <task id="LOCAL-00013" summary="29.08 updated">
+      <created>1693299900651</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1693299900651</updated>
+    </task>
+    <task id="LOCAL-00014" summary="07.09 updated">
+      <option name="closed" value="true" />
+      <created>1694069622433</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1694069622433</updated>
+    </task>
+    <task id="LOCAL-00015" summary="07.09.23 updated">
+      <option name="closed" value="true" />
+      <created>1694070019757</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1694070019757</updated>
+    </task>
+    <task id="LOCAL-00016" summary="08.09 updated">
+      <created>1694174663106</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1694174663106</updated>
+    </task>
+    <task id="LOCAL-00017" summary="09.10 updated">
+      <option name="closed" value="true" />
+      <created>1696837167119</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1696837167120</updated>
+    </task>
+    <task id="LOCAL-00018" summary="10.04 updated">
+      <option name="closed" value="true" />
+      <created>1712755899692</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712755899692</updated>
+    </task>
+    <task id="LOCAL-00019" summary="30.04 updated">
+      <option name="closed" value="true" />
+      <created>1714467180860</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1714467180860</updated>
+    </task>
+    <task id="LOCAL-00020" summary="20250820_Update">
+      <option name="closed" value="true" />
+      <created>1755692086384</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1755692086384</updated>
+    </task>
+    <task id="LOCAL-00021" summary="20250822_Update">
+      <option name="closed" value="true" />
+      <created>1755851647201</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1755851647201</updated>
+    </task>
+    <task id="LOCAL-00022" summary="20250822_Update XMLFiles">
+      <option name="closed" value="true" />
+      <created>1755856633521</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1755856633521</updated>
+    </task>
+    <task id="LOCAL-00023" summary="20250822_Update XMLFiles">
+      <option name="closed" value="true" />
+      <created>1755856834084</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1755856834084</updated>
+    </task>
+    <task id="LOCAL-00024" summary="20250822_Update XMLFiles">
+      <option name="closed" value="true" />
+      <created>1755857188759</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1755857188759</updated>
+    </task>
+    <task id="LOCAL-00025" summary="20250822_Update XMLFiles">
+      <option name="closed" value="true" />
+      <created>1755857577478</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1755857577478</updated>
+    </task>
+    <task id="LOCAL-00026" summary="20250822_Update XMLFiles">
+      <option name="closed" value="true" />
+      <created>1755858350991</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1755858350991</updated>
+    </task>
+    <task id="LOCAL-00027" summary="20250822_Update XMLFiles">
+      <option name="closed" value="true" />
+      <created>1755859164612</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1755859164612</updated>
+    </task>
+    <task id="LOCAL-00028" summary="20250822_Update XMLFiles">
+      <option name="closed" value="true" />
+      <created>1755859823069</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1755859823069</updated>
+    </task>
+    <task id="LOCAL-00029" summary="20250822_Update XMLFiles">
+      <option name="closed" value="true" />
+      <created>1755860129100</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1755860129100</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="03.05 updated" />
+    <MESSAGE value="05.05 updated" />
+    <MESSAGE value="08.05 updated" />
+    <MESSAGE value="09.05 updated" />
+    <MESSAGE value="10.05 updated" />
+    <MESSAGE value="15.05 updated" />
+    <MESSAGE value="18.05 updated" />
+    <MESSAGE value="22.05 updated" />
+    <MESSAGE value="24.05 updated" />
+    <MESSAGE value="31.05 updated" />
+    <MESSAGE value="21.08 updated" />
+    <MESSAGE value="29.08 updated" />
+    <MESSAGE value="07.09 updated" />
+    <MESSAGE value="07.09.23 updated" />
+    <MESSAGE value="08.09 updated" />
+    <MESSAGE value="09.10 updated" />
+    <MESSAGE value="10.04 updated" />
+    <MESSAGE value="30.04 updated" />
+    <MESSAGE value="20250820_Update" />
+    <MESSAGE value="20250822_Update" />
+    <MESSAGE value="20250822_Update XMLFiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="20250822_Update XMLFiles" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Pages/_Parent.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AcrossTestSuites$Scenario__TC_24_Success_Alarm_Import_with_Json_Format_in_Library_Level__1_.ic" NAME="Scenario: TC-24 Success Alarm Import with Json Format in Library Level (1) Coverage Results" MODIFIED="1694594168857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>io.cucumber.core.cli.*</FILTER>
+    </SUITE>
+  </component>
+</project>
