@@ -143,10 +143,11 @@
                 <configuration>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>C:\Users\AzizKaraca\IdeaProjects\AcrossQaTestSuites\testng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
-<!--                    <includes>-->
+
+                    <!--                    <includes>-->
 <!--                        &lt;!&ndash; for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   &ndash;&gt;-->
 <!--                        <include>**/SmokeTestRunner.java</include>-->
 <!--                        &lt;!&ndash;                        <include>**/runners/*TestRunner*.java</include>&ndash;&gt;-->
