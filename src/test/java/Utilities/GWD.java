@@ -48,9 +48,9 @@ public class GWD {
                                 .setup();
 
 
-                        ChromeOptions chromeOptions = new ChromeOptions();
-                        chromeOptions.addArguments("--incognito"); // incognito mode
-                        threadDriver.set(new ChromeDriver(chromeOptions));
+//                        ChromeOptions chromeOptions = new ChromeOptions();
+//                        chromeOptions.addArguments("--incognito"); // incognito mode
+                        threadDriver.set(new ChromeDriver());
                         break;
 
                     case "firefox":
