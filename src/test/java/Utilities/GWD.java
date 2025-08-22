@@ -37,9 +37,9 @@ public class GWD {
 
                     case "chrome":
                         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
-                        ChromeOptions chromeOptions = new ChromeOptions(); // if incognito not desired so delete this raw and delete below which include "opt"
-                        chromeOptions.addArguments("--incognito"); // incognito mode
-                        threadDriver.set(new ChromeDriver(chromeOptions)); // chromeOptions for incognito
+//                        ChromeOptions chromeOptions = new ChromeOptions(); // if incognito not desired so delete this raw and delete below which include "opt"
+//                        chromeOptions.addArguments("--incognito"); // incognito mode
+                        threadDriver.set(new ChromeDriver()); // chromeOptions for incognito
                         break;
 
                     case "firefox":
