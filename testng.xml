@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
-          name="C:/Users/AzizKaraca/IdeaProjects/AcrossQaTestSuites/src/test/java/Runners/SmokeTestRunner.java">
-        <classes/>
+<suite name="Jenkins All Test Suite">
+    <test
+            name="Across Jenkins Smoke Test">
+        <classes>
+            <class name="Runners.SmokeTestRunner"></class>
+        </classes>
     </test>
 </suite>
