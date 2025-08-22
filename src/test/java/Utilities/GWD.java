@@ -36,14 +36,14 @@ public class GWD {
                 switch (browserName){
 
                     case "chrome":
-                        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
-//                        ChromeOptions chromeOptions = new ChromeOptions(); // if incognito not desired so delete this raw and delete below which include "opt"
-//                        chromeOptions.addArguments("--incognito"); // incognito mode
-                        threadDriver.set(new ChromeDriver()); // chromeOptions for incognito
+//                        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
+                        ChromeOptions chromeOptions = new ChromeOptions(); // if incognito not desired so delete this raw and delete below which include "opt"
+                        chromeOptions.addArguments("--incognito"); // incognito mode
+                        threadDriver.set(new ChromeDriver(chromeOptions)); // chromeOptions for incognito
                         break;
 
                     case "firefox":
-                        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
+//                        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
                         FirefoxOptions firefoxOptions = new FirefoxOptions(); // for private mode
                         firefoxOptions.addArguments("-private"); // private mode
                         threadDriver.set(new FirefoxDriver(firefoxOptions)); // firefoxOptions fo private mode
