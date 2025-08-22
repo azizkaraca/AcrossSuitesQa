@@ -143,7 +143,7 @@
                 <configuration>
 
                     <suiteXmlFiles>
-                        <suiteXmlFile>src\test\java\XML_Files\testng.xml</suiteXmlFile>
+                        <suiteXmlFile>C:\Users\AzizKaraca\IdeaProjects\AcrossQaTestSuites\testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
 <!--                    <includes>-->
@@ -151,6 +151,7 @@
 <!--                        <include>**/SmokeTestRunner.java</include>-->
 <!--                        &lt;!&ndash;                        <include>**/runners/*TestRunner*.java</include>&ndash;&gt;-->
 <!--                    </includes>-->
+
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
