@@ -105,7 +105,6 @@ public class _Parent {
 
     }
 
-    //methods
     public void waitUntilVisible(WebElement element)
     {
 

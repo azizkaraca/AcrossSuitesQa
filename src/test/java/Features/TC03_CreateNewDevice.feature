@@ -5,7 +5,7 @@ Feature: Devices Creation
     When Login with QA user credentials
     Then Login should be successfully
 
-  @Regression
+  @SmokeTest @Regression
   Scenario: TC-03 Create a new Device
 
     And User clicks following Buttons

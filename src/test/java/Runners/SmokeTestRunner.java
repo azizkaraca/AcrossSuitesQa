@@ -16,11 +16,11 @@ import org.testng.annotations.Parameters;
 
 public class SmokeTestRunner extends AbstractTestNGCucumberTests {
 
-        @BeforeClass
-        @Parameters("browser")
-        public void beforeClass(String browser)
-        {
-            GWD.threadBrowser.set(browser);
-        }
+//        @BeforeClass
+//        @Parameters("browser")
+//        public void beforeClass(String browser)
+//        {
+//            GWD.threadBrowser.set(browser);
+//        }
 
 }
